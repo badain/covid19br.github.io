@@ -14,11 +14,12 @@
 
     <title>Observatório COVID-19 no Brasil</title>
 
-    <!-- Chart.js via CDN -->
+    <!-- Chart.js via CDN
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.15.6/dist/xlsx.min.js" integrity="sha256-hOCKwKbcZuaaHfbnL7n+l25SCB14sdPJN6U6EwVqvck=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0/dist/chartjs-plugin-datasource.min.js" integrity="sha256-IETwD2SE/IWT0oZy2CvQY78kyHqNsum864WdfYQ7chU=" crossorigin="anonymous"></script>
     <script src="./js/custom.js"></script>
+    -->
   </head>
   <body>
     <!-- Navbar -->
@@ -139,10 +140,18 @@
           <p class="card-text"><small class="text-muted">Última atualização: 23/04/2021 17:34</small></p>
         </div>
         <!-- Content -->
-        <!-- <div class="card-img-top d-flex align-items-center justify-content-center bg-dark" style="height:300px"><p class="text-center text-light">300</div> -->
-        <!--<img src="https://picsum.photos/500/300?random=1" class="card-img-top" alt="...">-->
         <!--<div class="d-block"><canvas id="myChart"></canvas></div>-->
-        <div class="card-body pt-0 pb-0"><iframe scrolling='no' seamless='seamless' src='./graphs/widget/plot.tempo.dupl.html'></iframe></div>
+        <div class="card-body pt-0 pb-0">
+          <!-- <iframe scrolling='no' seamless='seamless' src='./graphs/widget/plot.tempo.dupl.html'></iframe> -->
+          <div class="codegena_iframe" data-src="http://[domain one]/maps/gmap1.html" 
+               style="height:480px;width:640px;" 
+               data-responsive="true" 
+               data-img="./graphs/svg/plot.tempo.dupl.svg" 
+               data-css="background:url('//[domain one]/wp-content/uploads/2017/05/loading.gif') white center center no-repeat;border:0px;" 
+               data-name="SL test">
+          </div>
+          <script src="./js/async-iframe.js"></script>
+        </div>
         <div class="card-body pt-2 pb-0 d-flex justify-content-center">
           <small class="chartLegendSquare d-flex align-self-center mr-4" id="legendGrey">Casos Confirmados</small>
           <small class="chartLegendSquare d-flex align-self-center mr-4" id="legendBlue">Previsão</small>
