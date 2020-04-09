@@ -4,9 +4,11 @@ Report bugs at shaneapen@codegena.com
 var i, c, y, v, s, n;
 var im = [];
 v = document.getElementsByClassName("codegena_iframe");
+/*
 for (n = 0; n < v.length; n++) {
   im[n] = v[n].hasAttribute("data-img") ? v[n].getAttribute("data-img") : "http://2.bp.blogspot.com/-krXgAqXpPPw/VgkPK7s9CMI/AAAAAAAAB1Y/IVvHmrRYMDI/s1600/dynamic_iframe.png";
 }
+*/
 
 if (v.length > 0) {
   s = document.createElement("style");
