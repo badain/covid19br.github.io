@@ -1,0 +1,150 @@
+.navbar {
+    box-shadow: 0 7px 6px 0 rgba(128, 128, 128, 0.05)!important;
+    border-bottom: solid 1px #f1f1f1!important;
+}
+
+#navbarDropdown {
+    font-family: 'Poppins', sans-serif;
+    font-size: .9rem;
+    margin: 0.2rem 0 0;
+    font-weight: 500;
+}
+
+.navbar-logo {
+    height: 45px;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent!important;
+}
+
+@media (max-width: 390px) {
+    .navbar-logo {
+        height: 33px!important;
+    }
+    .nav-link {
+        padding: .5rem 0.25rem!important;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .navbar-toggler {
+        padding: .25rem .75rem .25rem 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-brand {
+       margin-left: .25rem;
+    }
+}
+
+/* PAGE TITLE & UPDATE DATE */
+#page-title {
+    margin: 0 1.3rem;
+}
+.display {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .display {
+        font-size: 2.5rem;
+        display: flex;
+        flex-direction: column!important;
+    }
+}
+
+#update {
+    font-family: 'Poppins', sans-serif;
+    font-size: .85rem;
+    //font-weight: 500;
+}
+
+/* CARDS */
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: .85rem;
+}
+
+.card-icon {
+    float: left;
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .card-columns {
+        column-count: 1;
+    }
+}
+
+/* Small devices (large devices, 992px and up) to (extra large devices, up to 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 1199.98px) {
+    .card-text {
+        font-size: 85%;
+    }
+
+    .media {
+        display: block!important;
+    }
+}
+
+/* CARD CONTENT */
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+}
+
+.chartLegendSquare {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.chartLegendSquare:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin: 0 0.5rem 0 0;
+    border-radius: 4px;
+}
+
+.chartLegendSquare#legendGrey:before {
+    background-color: #9d9fa6;
+}
+
+.chartLegendSquare#legendBlue:before {
+    background-color: #007bff;
+}
+
+.chartLegendSquare#legendBlueLight:before {
+    background-color: #55a1f2;
+}
+
+.chartLegendSquare#legendBlueDark:before {
+    background-color: #0050a6;
+}
+
+/* GRAPH */
+#htmlwidget_container {
+    position: static!important;
+    top: 0px!important;
+    right: 0px!important;
+    bottom: 0px!important;
+    left: 0px!important;
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    height: 350px;
+}

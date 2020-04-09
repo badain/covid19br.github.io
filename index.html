@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS via BootstrapCDN -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> <!-- Poppins Font -->
-    <link href="../css/custom.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
 
     <title>Observatório COVID-19 no Brasil</title>
 
@@ -18,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.15.6/dist/xlsx.min.js" integrity="sha256-hOCKwKbcZuaaHfbnL7n+l25SCB14sdPJN6U6EwVqvck=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0/dist/chartjs-plugin-datasource.min.js" integrity="sha256-IETwD2SE/IWT0oZy2CvQY78kyHqNsum864WdfYQ7chU=" crossorigin="anonymous"></script>
-    <script src="../js/custom.js"></script>
+    <script src="./js/custom.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -29,7 +29,7 @@
       </button>
       <!-- Logo -->
       <a class="navbar-brand mr-auto" href="#"> <!-- mr-auto fixes logo on the right -->
-        <img class="navbar-logo" src="../img/logo.svg"></img>
+        <img class="navbar-logo" src="./img/logo.svg"></img>
         <h1 class="text-hide mb-0">Observatório COVID-19</h1> <!-- SEO -->
       </a>
       <!-- Dropdown -->
@@ -94,7 +94,7 @@
 
     <!-- Date & Hour -->
     <div class="container-fluid mt-2" id="page-title">
-      <h1 class="display-4">Visão Geral<small class="text-muted ml-2 mr-1" id="update">Última atualização:</small><small class="text-muted" id="date">18:00 ⋅ 04/04/2020</small></h1>
+      <h1 class="display">Visão Geral<small class="text-muted ml-2" id="update">Última atualização: 18:00 ⋅ 04/04/2020</small></h1>
   </div>
 
     <!-- Cards -->
@@ -103,7 +103,7 @@
       <div class="card shadow-sm">
         <div class="card-body">
           <div class="media">
-            <img src="../img/icon_globe.svg" class="card-icon mr-3" width=64px alt="..."> <!-- Adicionar alt!-->
+            <img src="./img/icon_globe.svg" class="card-icon mr-3" width=64px alt="..."> <!-- Adicionar alt!-->
             <div class="media-body">
               <h5 class="card-title m-0">Dinâmicas de contágio</h5>
               <p class="card-text">Como epidemias se espalham por um país continental?</p>
@@ -111,7 +111,6 @@
           </div>
           <p class="card-text"><small class="text-muted">Última atualização: 23/04/2021 17:34</small></p>
         </div>
-        <!-- <div class="card-img-top d-flex align-items-center justify-content-center bg-dark" style="height:600px"><p class="text-center text-light">600</div> --> <!-- PLACEHOLDER -->
         <img src="https://covid19br.github.io/fig/voos_brasil.jpg" class="card-img-top" alt="..."> <!-- SEO -->
         <p class="card-text text-center mr-2 ml-2"><small class="text-muted">Os pontos representam estados brasileiros e as setas indicam a intensidade de vôos saindo de um estado e chegando em outro.</small></p>
         <div class="card-body pt-0">
@@ -131,7 +130,7 @@
         <div class="card-body">
           <div class="media">
             <!--<div class="card-icon mr-3 d-flex align-items-center justify-content-center bg-dark" style="width: 64px; height:64px"><p class="text-center text-light">64</div>-->
-            <img src="../img/icon_virus.svg"  width=64px class="card-icon mr-3" alt="Corona Vírus"> <!-- Adicionar alt!-->
+            <img src="./img/icon_virus.svg"  width=64px class="card-icon mr-3" alt="Corona Vírus"> <!-- Adicionar alt!-->
             <div class="media-body">
               <h5 class="card-title m-0">Progressão da doença</h5>
               <p class="card-text">Quantos casos notificados já temos no Brasil? Quantos teremos nos próximos dias?</p>
@@ -143,7 +142,7 @@
         <!-- <div class="card-img-top d-flex align-items-center justify-content-center bg-dark" style="height:300px"><p class="text-center text-light">300</div> -->
         <!--<img src="https://picsum.photos/500/300?random=1" class="card-img-top" alt="...">-->
         <!--<div class="d-block"><canvas id="myChart"></canvas></div>-->
-        <div class="card-body pt-0 pb-0"><iframe scrolling='no' seamless='seamless' src='graph.html'></iframe></div>
+        <div class="card-body pt-0 pb-0"><iframe scrolling='no' seamless='seamless' src='./graphs/widget/plot.tempo.dupl.html'></iframe></div>
         <div class="card-body pt-2 pb-0 d-flex justify-content-center">
           <small class="chartLegendSquare d-flex align-self-center mr-4" id="legendGrey">Casos Confirmados</small>
           <small class="chartLegendSquare d-flex align-self-center mr-4" id="legendBlue">Previsão</small>
@@ -193,7 +192,7 @@
       <div class="card shadow-sm">
         <div class="card-body">
           <div class="media">
-            <img src="../img/icon_people.svg" class="card-icon mr-3" width=64px alt="..."> <!-- SEO: Adicionar alt!-->
+            <img src="./img/icon_people.svg" class="card-icon mr-3" width=64px alt="..."> <!-- SEO: Adicionar alt!-->
             <div class="media-body">
               <h5 class="card-title m-0">Isolamento Social</h5>
               <p class="card-text">Como o isolamento social influencia a dinâmica de propagação da epidemia?</p>
@@ -220,6 +219,7 @@
     <!-- Footer -->
     <div class="container-fluid bg-light p-2">
       <p class="text-dark mb-0"><small>Designed with Bootstrap</small></p>
+      <!-- Todo: adicionar link pro repositorio do git c/ logo -->
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS via BootstrapCDN-->
