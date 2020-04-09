@@ -1,0 +1,230 @@
+<!doctype html> <!-- HTML 5 doctype -->
+<html lang="pt"> 
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="This is a description"> <!-- SEO: https://support.google.com/webmasters/answer/35624?hl=en#meta-descriptions -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Mobile-First Approach: Responsive -->
+    <!-- Include Favicons -->
+
+    <!-- Bootstrap CSS via BootstrapCDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> <!-- Poppins Font -->
+    <link href="./css/custom.css" rel="stylesheet">
+
+    <title>Observatório COVID-19 no Brasil</title>
+
+    <!-- Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.15.6/dist/xlsx.min.js" integrity="sha256-hOCKwKbcZuaaHfbnL7n+l25SCB14sdPJN6U6EwVqvck=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0/dist/chartjs-plugin-datasource.min.js" integrity="sha256-IETwD2SE/IWT0oZy2CvQY78kyHqNsum864WdfYQ7chU=" crossorigin="anonymous"></script>
+    <script src="./js/custom.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light border-bottom shadow-sm bg-white">
+      <!-- Dropdown Menu-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Logo -->
+      <a class="navbar-brand mr-auto" href="#"> <!-- mr-auto fixes logo on the right -->
+        <img class="navbar-logo" src="./img/logo.svg"></img>
+        <h1 class="text-hide mb-0">Observatório COVID-19</h1> <!-- SEO -->
+      </a>
+      <!-- Dropdown -->
+      <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Brasil
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Brasil</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">São Paulo</a>
+            <a class="dropdown-item" href="#">Rio de Janeiro</a>
+            <!--  
+            <a class="dropdown-item" href="#">AC</a>
+            <a class="dropdown-item" href="#">AL</a>
+            <a class="dropdown-item" href="#">AM</a>
+            <a class="dropdown-item" href="#">AP</a>
+            <a class="dropdown-item" href="#">BA</a>
+            <a class="dropdown-item" href="#">CE</a>
+            <a class="dropdown-item" href="#">DF</a>
+            <a class="dropdown-item" href="#">ES</a>
+            <a class="dropdown-item" href="#">GO</a>
+            <a class="dropdown-item" href="#">MA</a>
+            <a class="dropdown-item" href="#">MG</a>
+            <a class="dropdown-item" href="#">MS</a>
+            <a class="dropdown-item" href="#">MT</a>
+            <a class="dropdown-item" href="#">PA</a>
+            <a class="dropdown-item" href="#">PB</a>
+            <a class="dropdown-item" href="#">PE</a>
+            <a class="dropdown-item" href="#">PI</a>
+            <a class="dropdown-item" href="#">PR</a>
+            <a class="dropdown-item" href="#">RJ</a>
+            <a class="dropdown-item" href="#">RN</a>
+            <a class="dropdown-item" href="#">RO</a>
+            <a class="dropdown-item" href="#">RR</a>
+            <a class="dropdown-item" href="#">RS</a>
+            <a class="dropdown-item" href="#">SC</a>
+            <a class="dropdown-item" href="#">SE</a>
+            <a class="dropdown-item" href="#">SP</a>
+            <a class="dropdown-item" href="#">TO</a>
+            -->
+          </div>
+      </div>
+      <!-- Collapsable -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Visão Geral</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Fontes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Informações Técnicas</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre</a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+
+    <!-- Date & Hour -->
+    <div class="container-fluid mt-2" id="page-title">
+      <h1 class="display">Visão Geral<small class="text-muted ml-2" id="update">Última atualização: 18:00 ⋅ 04/04/2020</small></h1>
+  </div>
+
+    <!-- Cards -->
+    <div class="card-columns m-3">
+      <!-- Mapa Card-->
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="media">
+            <img src="./img/icon_globe.svg" class="card-icon mr-3" width=64px alt="..."> <!-- Adicionar alt!-->
+            <div class="media-body">
+              <h5 class="card-title m-0">Dinâmicas de contágio</h5>
+              <p class="card-text">Como epidemias se espalham por um país continental?</p>
+            </div>
+          </div>
+          <p class="card-text"><small class="text-muted">Última atualização: 23/04/2021 17:34</small></p>
+        </div>
+        <img src="https://covid19br.github.io/fig/voos_brasil.jpg" class="card-img-top" alt="..."> <!-- SEO -->
+        <p class="card-text text-center mr-2 ml-2"><small class="text-muted">Os pontos representam estados brasileiros e as setas indicam a intensidade de vôos saindo de um estado e chegando em outro.</small></p>
+        <div class="card-body pt-0">
+          <p class="text-justify">
+            A chave pode estar na rede formada por aeroportos e vôos conectando os estados brasileiros.
+            Portanto, a análise da estrutura dessa rede aérea pode nos ajudar a entender a propagação do COVID-19 por nosso país.
+          </p>
+          <!-- BUTTON -->
+          <a href="https://guimaraeslabbr.weebly.com/COVID19.html" target="_blank"><button class="btn btn-primary mt-1" type="button">
+            Leia mais sobre
+          </button></a>
+          <footer class="blockquote-footer text-right">Observatório COVID-19</footer>
+        </div>
+      </div>      
+      <!-- Graph Card-->
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="media">
+            <!--<div class="card-icon mr-3 d-flex align-items-center justify-content-center bg-dark" style="width: 64px; height:64px"><p class="text-center text-light">64</div>-->
+            <img src="./img/icon_virus.svg"  width=64px class="card-icon mr-3" alt="Corona Vírus"> <!-- Adicionar alt!-->
+            <div class="media-body">
+              <h5 class="card-title m-0">Progressão da doença</h5>
+              <p class="card-text">Quantos casos notificados já temos no Brasil? Quantos teremos nos próximos dias?</p>
+            </div>
+          </div>
+          <p class="card-text"><small class="text-muted">Última atualização: 23/04/2021 17:34</small></p>
+        </div>
+        <!-- Content -->
+        <!-- <div class="card-img-top d-flex align-items-center justify-content-center bg-dark" style="height:300px"><p class="text-center text-light">300</div> -->
+        <!--<img src="https://picsum.photos/500/300?random=1" class="card-img-top" alt="...">-->
+        <!--<div class="d-block"><canvas id="myChart"></canvas></div>-->
+        <div class="card-body pt-0 pb-0"><iframe scrolling='no' seamless='seamless' src='./graphs/widget/plot.tempo.dupl.html'></iframe></div>
+        <div class="card-body pt-2 pb-0 d-flex justify-content-center">
+          <small class="chartLegendSquare d-flex align-self-center mr-4" id="legendGrey">Casos Confirmados</small>
+          <small class="chartLegendSquare d-flex align-self-center mr-4" id="legendBlue">Previsão</small>
+        </div>
+        <div class="card-body pt-2 pb-0 d-flex justify-content-center">
+          <small class="chartLegendSquare d-flex align-self-center mr-4" id="legendBlueLight">Limite Superior</small>
+          <small class="chartLegendSquare d-flex align-self-center" id="legendBlueDark">Limite Inferior</small>
+        </div>
+        <!--<p class="card-text text-center"><small class="text-muted">Legenda do Gráfico</small></p>-->
+        <div class="card-body pt-0">
+          <button class="btn btn-primary mb-3 mt-3" type="button" data-toggle="collapse" data-target="#collapseGraph" aria-expanded="false" aria-controls="collapseGraph">
+            Por que só 5 dias? ▾
+          </button>
+          <div class="collapse" id="collapseGraph">
+            <p class="text-justify">
+              Porque quando o crescimento é exponencial as <b>incertezas também crescem exponencialmente.</b>
+              Por isso a região cinza, que expressa a incerteza da previsão, aumenta de largura com o tempo.
+              E mesmo pequenas mudanças na taxa que aconteçam hoje ou amanhã vão causar enormes variações no futuro.
+            </p>
+            <p class="text-justify">
+              Por isso avaliamos que é inadequado fazer previsões para mais de 5 dias com este método.
+            </p>
+            <footer class="blockquote-footer text-right">Observatório COVID-19</footer>
+          </div>
+        </div>
+      </div>
+      <!-- Notice Card -->
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="media">
+            <div class="media-body">
+              <h5 class="card-title">Quão rápido a doença se propaga?</h5>
+              <p class="card-text">
+                No momento não é possível estimar tempos de duplicação da epidemia, pois há um enorme acúmulo de testes moleculares sem resultados, necessários para que os casos sejam confirmados e notificados.
+                Essa demora faz com que os números disponíveis publicamente (número de notificações) cresça de maneira artificialmente lenta.
+              </p>
+              <p class="card-text">
+                Assim, a evolução do números oficiais informa hoje sobre a dinâmica de notificação, não da epidemia.
+                Seria irresponsável seguir divulgando medidas de propagação da epidemia no Brasil com esses números.
+              </p>
+            </div>
+          </div>
+          <p class="card-text"><small class="text-muted">Última atualização: 23/04/2021 17:34</small></p>
+        </div>
+      </div>
+      <!-- Isolamento Card-->
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="media">
+            <img src="./img/icon_people.svg" class="card-icon mr-3" width=64px alt="..."> <!-- SEO: Adicionar alt!-->
+            <div class="media-body">
+              <h5 class="card-title m-0">Isolamento Social</h5>
+              <p class="card-text">Como o isolamento social influencia a dinâmica de propagação da epidemia?</p>
+            </div>
+          </div>
+          <p class="card-text"><small class="text-muted">Última atualização: 23/04/2021 17:34</small></p>
+        </div>
+        <!-- <div class="card-img-top d-flex align-items-center justify-content-center bg-dark" style="height:500px"><p class="text-center text-light">500</div> --> <!-- PLACEHOLDER -->
+        <img src="https://covid19br.github.io/fig/rede_prsc.jpg" class="card-img-top" alt="..."> <!-- SEO -->
+        <p class="card-text text-center mr-3 ml-3"><small class="text-muted">Nesta simulação cada pessoa tem um número de contatos e esses contatos estão espalhados no espaço e conectadas interações sociais.</small></p>
+        <div class="card-body pt-0">
+          <p class="text-justify">
+            Aqui, usamos um cenário bem simples para ilustrar as <b>vantagens do isolamento social</b> em reduzir a propagação de uma doença contagiosa.
+            Nós traduzimos e adaptamos o modelo de propagação de um vírus em uma rede social feito por Uri Wilensky (Northwestern University). 
+          </p>
+          <a href="https://guimaraeslabbr.weebly.com/COVID19.html" target="_blank"><button class="btn btn-primary mt-1" type="button">
+            Simule diferentes cenários
+          </button></a>
+          <footer class="blockquote-footer text-right">Observatório COVID-19</footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-light p-2">
+      <p class="text-dark mb-0"><small>Designed with Bootstrap</small></p>
+      <!-- Todo: adicionar link pro repositorio do git c/ logo -->
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS via BootstrapCDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
