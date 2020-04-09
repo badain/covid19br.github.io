@@ -4,11 +4,6 @@ Report bugs at shaneapen@codegena.com
 var i, c, y, v, s, n;
 var im = [];
 v = document.getElementsByClassName("codegena_iframe");
-/*
-for (n = 0; n < v.length; n++) {
-  im[n] = v[n].hasAttribute("data-img") ? v[n].getAttribute("data-img") : "http://2.bp.blogspot.com/-krXgAqXpPPw/VgkPK7s9CMI/AAAAAAAAB1Y/IVvHmrRYMDI/s1600/dynamic_iframe.png";
-}
-*/
 
 if (v.length > 0) {
   s = document.createElement("style");
@@ -23,12 +18,13 @@ if (v.length > 0) {
 for (n = 0; n < v.length; n++) {
   y = v[n];
   if(y.getAttribute("data-responsive")=="true"){
-    var sty="height:" + y.style.height + ";width:100%;max-width:" + y.style.width + ";";
+    var sty="width:100%";
      y.setAttribute("style",sty);     
   }
+
   i = document.createElement("img");
-  i.setAttribute("src", im[n]);
-  i.setAttribute("class", "thumb");
+  i.setAttribute("src", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+  i.setAttribute("style", "display: none;");
   /*c = document.createElement("div");
   c.setAttribute("class", "play");*/
   y.appendChild(i);
