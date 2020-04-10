@@ -87,3 +87,31 @@ Alguns avisos aparecem após a execução, e ela demora um pouco. Espere termina
 
 ## Adicionando novas páginas
 
+## Alterando o título da página
+Busque por <!-- PAGE.TITLE --> e 
+
+## Adicionando itens no menu dos estados
+Inclua os dados do estado no código a seguir e use-o para substituir <!-- ESTADOS.ITEM --> no arquivo .html: 
+'''
+<a class="dropdown-item" href="./siglaAqui.html">Nome do Estado</a>
+<!-- ESTADOS.ITEM -->
+'''
+
+## Adicionando itens no menu principal
+Inclua os dados da página no código a seguir e use-o para substituir <!-- MENU.ITEM --> no arquivo .html: 
+'''
+<li class="nav-item">
+  <a class="nav-link" href="./ITEM.html">ITEM</a>
+</li>
+<!-- MENU.ITEM -->
+'''
+No arquivo .hmtl do próprio item, o código deve ser o seguinte para correta indicação:
+'''
+<li class="nav-item active">
+  <a class="nav-link" href="./ITEM.html">ITEM</a>
+</li>
+<!-- MENU.ITEM -->
+'''
+
+## Alterando o logo do observatório
+Busque por <!-- OBSERV.LOGO.IMAGEM --> e substitua o conteúdo de src="" pelo arquivo .svg desejado.

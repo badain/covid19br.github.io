@@ -1,6 +1,15 @@
+/*  OBSERVATORIO COVID-19 BR */
+/* Designed by Rafael Badain */
+
+/* NAVBAR */
 .navbar {
     box-shadow: 0 7px 6px 0 rgba(128, 128, 128, 0.05)!important;
     border-bottom: solid 1px #f1f1f1!important;
+    background-color: #fff!important;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
 }
 
 #navbarDropdown {
@@ -12,6 +21,10 @@
 
 .navbar-logo {
     height: 45px;
+}
+
+.navbar-brand {
+    margin-right: auto!important; /*Fixes logo on the rigth*/
 }
 
 .navbar-light .navbar-toggler {
@@ -60,7 +73,6 @@
 #update {
     font-family: 'Poppins', sans-serif;
     font-size: .85rem;
-    /*font-weight: 500;*/
 }
 
 /* CARDS */
