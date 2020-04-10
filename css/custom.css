@@ -154,7 +154,7 @@ body {
     min-height: 100vh;
     position: relative;
     margin: 0;
-    padding-bottom: 40px; //height of the footer
+    padding-bottom: 40px; /* height of the footer (check on dev tools)*/
   }
   
   footer {

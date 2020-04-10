@@ -148,7 +148,6 @@
       <div class="card shadow-sm">
         <div class="card-body">
           <div class="media">
-            <!--<div class="card-icon mr-3 d-flex align-items-center justify-content-center bg-dark" style="width: 64px; height:64px"><p class="text-center text-light">64</div>-->
             <img src="./img/icon_virus.svg"  width=64px class="card-icon mr-3" alt="Corona Vírus"> <!-- Adicionar alt!-->
             <div class="media-body">
               <h5 class="card-title m-0">Progressão da doença</h5>
@@ -158,9 +157,7 @@
           <p class="card-text"><small class="text-muted">Última atualização: 23/04/2021 17:34</small></p>
         </div>
         <!-- Content -->
-        <!--<div class="d-block"><canvas id="myChart"></canvas></div>-->
         <div class="card-body pt-0 pb-0">
-          <!-- <iframe scrolling='no' seamless='seamless' src='./graphs/widget/plot.tempo.dupl.html'></iframe> -->
           <div class="codegena_iframe" data-src="./graphs/plot.tempo.dupl.html" data-css="background:url('./img/loading.gif') white center center no-repeat;border:0px;"  data-responsive="true">
             <img src=./graphs/plot.tempo.dupl.svg width="100%">
           </div>
@@ -174,7 +171,6 @@
           <small class="chartLegendSquare d-flex align-self-center mr-4" id="legendBlueLight">Limite Superior</small>
           <small class="chartLegendSquare d-flex align-self-center" id="legendBlueDark">Limite Inferior</small>
         </div>
-        <!--<p class="card-text text-center"><small class="text-muted">Legenda do Gráfico</small></p>-->
         <div class="card-body pt-0">
           <button class="btn btn-primary mb-3 mt-3" type="button" data-toggle="collapse" data-target="#collapseGraph" aria-expanded="false" aria-controls="collapseGraph">
             Por que só 5 dias? ▾
@@ -240,14 +236,18 @@
     </div>
 
     <!-- Footer -->
-    <footer class="container-fluid bg-light p-2">
-      <p class="text-muted mb-0"><small>Designed with Bootstrap</small></p>
-      <!-- Todo: adicionar link pro repositorio do git c/ logo -->
-  </footer>
-    <!-- Optional JavaScript -->
+    <footer class="container-fluid bg-light p-2 d-flex justify-content-around text-muted">
+      <div class="d-flex align-items-center"> 
+        <ion-icon name="logo-github"></ion-icon>
+        <p class="mb-0 ml-1"><a href="https://github.com/covid19br/covid19br.github.io" target="_blank" class="text-reset">Source Code</a></p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS via BootstrapCDN-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> <!-- Ionic Icons -->
   </body>
 </html>
