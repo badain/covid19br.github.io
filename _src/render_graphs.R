@@ -14,6 +14,9 @@ filenames <- names(plots)
 
 for (i in 1:n){
     graph <- ggplotly(plots[[i]])
-    orca(graph, paste(filenames[i],".svg",sep="")) # Static Graph
-    saveWidget(frameableWidget(graph), file = paste(filenames[i],".html",sep="")) # Interative Graph 
+    filepath <- paste("../graphs/",filenames[i],sep="")
+    orca(graph, paste(filepath,".svg",sep="")) # Static Graph
+    saveWidget(graph, file = paste(filepath,".html",sep=""), libdir="../libs") # Interative Graph
+#    comand <- paste('rm -r ',filepath,sep="")
+#    system(paste(comand,'_files',sep=""))
 }
