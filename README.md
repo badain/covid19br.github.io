@@ -88,7 +88,8 @@ O arquivo `template.html` é um bom ponto de partida para criação de novas pá
 A estrutura do site é composta por quatro principais grupos:
 
 ### 1. Barra Superior
-A barra superior é o elemento flutuante que inclui o logo, o menu de estados e o menu de paginas do site. 
+A barra superior é o elemento flutuante que inclui o logo, o menu de estados e o menu de paginas do site.
+Alterações na barra superior devem ser incluidas em todos os arquivos .html para garatinr consistência na navegação.
 
 #### Adicionando itens no menu dos estados
 Inclua os dados do estado no código a seguir e use-o para substituir ```<!-- ESTADOS.ITEM -->``` no arquivo .html:
