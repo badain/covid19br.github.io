@@ -137,6 +137,18 @@ A estrutura básica de um card é formada por:
 ```
 Basta adicionar os conteúdos desejados em `<!-- CONTEÚDO AQUI -->` de acordo com os códigos pré-fabricados a seguir:
 
+##### Adicionando um título com ícone lateral ao card
+```
+<!-- CARD.HEADER -->
+<div class="media">
+  <img src="./img/icon_globe.svg" class="card-icon" width=64px alt="Avião sobrevoando o globo terrestre"> <!-- CARD.TITLE.ICON -->
+  <div class="media-body">
+    <h5 class="card-title">Dinâmicas de contágio</h5> <!-- CARD.TITLE.TEXT -->
+    <p class="card-text">Como epidemias se espalham por um país continental?</p> <!-- CARD.TITLE.DESCRIPTION -->
+  </div>
+</div>
+```
+
 #### Adicionando cards em uma página
 Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a posição desejada.
 
