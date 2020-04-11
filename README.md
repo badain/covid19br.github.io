@@ -171,7 +171,7 @@ Modifique o **título** buscando por `<!-- CARD.TITLE.TEXT -->` e substituindo `
 Existem múltiplos elementos de conteúdo que podem ser combinados livremente em um card:
 
 ##### 2.1.1 Data de atualização (manual)
-Modifique uma data de atualização manual para seu card buscando por `<!-- CARD.DATE.MANUAL -->` ou insira com o código a seguir:
+Modifique uma data de atualização manual buscando por `<!-- CARD.DATE.MANUAL -->` ou insira com o código a seguir:
 ```
 <!-- CARD.DATE.MANUAL -->
 <p class="text-muted"><small>Última atualização: DD/MM/AAAA HH:MM</small></p>
