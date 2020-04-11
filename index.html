@@ -110,7 +110,7 @@
             </div>
 
             <!-- CARD.DATE.MANUAL -->
-            <p class="text-muted"><small>Última atualização: 23/04/2021 17:34</small></p>
+            <p class="card-date"><small>Última atualização: 23/04/2021 17:34</small></p>
             
             <!-- CARD.IMAGE -->
             <img src="./fig/voos_brasil.jpg" class="card-img-top" alt="Gráfico de conexões sobre o mapa do Brasil que representa a dinâmica de propagação no país"> <!-- Todo: Compactar imagem -->
@@ -123,7 +123,7 @@
             </p>
     
             <!-- CARD.BUTTON -->
-            <a href="https://guimaraeslabbr.weebly.com/COVID19.html" target="_blank"><button class="btn btn-primary mt-1" type="button">
+            <a href="https://guimaraeslabbr.weebly.com/COVID19.html" target="_blank"><button class="btn btn-primary" type="button">
             Leia mais sobre
             </button></a>
 
@@ -135,38 +135,38 @@
 
       <!-- NEW.CARD -->
       
-      <!-- Graph Card-->
+      <!-- GRAPH.CARD -->
       <div class="card">
-        <div class="card-body">
-          
+        <div class="card-body">        
+          <!-- CARD.HEADER -->
           <div class="media">
-            <img src="./img/icon_virus.svg"  width=64px class="card-icon mr-3" alt="Corona Vírus"> <!-- Adicionar alt!-->
+            <img src="./img/icon_virus.svg" width=64px alt="Desenho do coronavírus" class="card-icon"> <!-- CARD.TITLE.ICON -->
             <div class="media-body">
-              <h5 class="card-title m-0">Progressão da doença</h5>
-              <p class="card-text">Quantos casos notificados já temos no Brasil? Quantos teremos nos próximos dias?</p>
+              <h5 class="card-title">Progressão da doença</h5> <!-- CARD.TITLE.TEXT -->
+              <p class="card-text">Quantos casos notificados já temos no Brasil? Quantos teremos nos próximos dias?</p> <!-- CARD.TITLE.DESCRIPTION -->
             </div>
           </div>
-          <p class="card-text"><small class="text-muted">Última atualização: 23/04/2021 17:34</small></p>
-        </div>
-        <!-- Content -->
-        <div class="card-body pt-0 pb-0">
+
+          <!-- CARD.DATE.MANUAL -->
+          <p class="card-date"><small>Última atualização: DD/MM/AAAA HH:MM</small></p>
+
+          <!-- CARD.GGPLOT -->
           <div class="codegena_iframe" data-src="./graphs/plot.tempo.dupl.html" data-css="background:url('./img/loading.gif') white center center no-repeat;border:0px;"  data-responsive="true">
             <img src=./graphs/plot.tempo.dupl.svg width="100%">
           </div>
           <script src="./js/async-iframe.js"></script>
-        </div>
-        <div class="card-body pt-2 pb-0 d-flex justify-content-center">
-          <small class="chartLegendSquare d-flex align-self-center mr-4" id="legendGrey">Casos Confirmados</small>
-          <small class="chartLegendSquare d-flex align-self-center mr-4" id="legendBlue">Previsão</small>
-        </div>
-        <div class="card-body pt-2 pb-0 d-flex justify-content-center">
-          <small class="chartLegendSquare d-flex align-self-center mr-4" id="legendBlueLight">Limite Superior</small>
-          <small class="chartLegendSquare d-flex align-self-center" id="legendBlueDark">Limite Inferior</small>
-        </div>
-        <div class="card-body pt-0">
-          <button class="btn btn-primary mb-3 mt-3" type="button" data-toggle="collapse" data-target="#collapseGraph" aria-expanded="false" aria-controls="collapseGraph">
+
+          <!-- CARD.GGPLOT.LEGEND -->
+          <div class="card-chartLegend">
+            <small class="chartLegendSquare" id="legendGrey">Casos Confirmados</small>
+            <small class="chartLegendSquare" id="legendBlue">Previsão</small>
+          </div>
+          
+          <!-- CARD.BUTTON.EXPAND -->
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseGraph" aria-expanded="false" aria-controls="collapseGraph">
             Por que só 5 dias? ▾
           </button>
+          <!-- CARD.BUTTON.EXPAND.CONTENT -->
           <div class="collapse" id="collapseGraph">
             <p class="text-justify">
               Porque quando o crescimento é exponencial as <b>incertezas também crescem exponencialmente.</b>
@@ -176,8 +176,12 @@
             <p class="text-justify">
               Por isso avaliamos que é inadequado fazer previsões para mais de 5 dias com este método.
             </p>
+
+            <!-- CARD.SIGNATURE -->
             <div class="blockquote-footer text-right">Observatório COVID-19</div>
+
           </div>
+
         </div>
       </div>
 
@@ -203,7 +207,7 @@
           </p>
           
           <!-- CARD.DATE.MANUAL -->
-          <p class="card-text text-muted"><small>Última atualização: 23/04/2021 17:34</small></p>
+          <p class="card-date"><small>Última atualização: 23/04/2021 17:34</small></p>
 
         </div>
       </div>

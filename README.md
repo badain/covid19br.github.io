@@ -174,7 +174,7 @@ Existem múltiplos elementos de conteúdo que podem ser combinados livremente em
 Modifique uma data de atualização manual buscando por `<!-- CARD.DATE.MANUAL -->` ou insira com o código a seguir:
 ```
 <!-- CARD.DATE.MANUAL -->
-<p class="text-muted"><small>Última atualização: DD/MM/AAAA HH:MM</small></p>
+<p class="card-date"><small>Última atualização: DD/MM/AAAA HH:MM</small></p>
 ```
 Nota: a data e hora devem ser entradas manualmente.
 
@@ -186,7 +186,44 @@ Modifique uma imagem estática e sua legenda buscando por `<!-- CARD.IMAGE -->` 
 <p class="card-text legenda"><small>BREVE LEGENDA AQUI</small></p> <!-- CARD.IMAGE.LEGENDA -->
 ```
 
-##### 2.3 Texto justificado
+##### 2.3 GGPlot interativo
+Modifique um GGPlot interativo buscando por `<!-- CARD.GGPLOT -->` ou insira um novo utilizando:
+```
+<!-- CARD.GGPLOT -->
+<div class="codegena_iframe" data-src="./graphs/IDENTIFICADOR.DO.GRAFICO.html" data-css="background:url('./img/loading.gif') white center center no-repeat;border:0px;"  data-responsive="true">
+  <img src=./graphs/IDENTIFICADOR.DO.GRAFICO.svg width="100%">
+</div>
+<script src="./js/async-iframe.js"></script>
+```
+Nota: `IDENTIFICADOR.DO.GRAFICO` deve ser substituído pelo mesmo identificador utilizado na geração do gráfico em `render_graphs.R`
+
+##### 2.4 Legenda de gráfico
+Modifique a legenda de um gráfico buscando por `<!-- CARD.GGPLOT.LEGEND -->` ou insira uma nova utilizando:
+```
+<!-- CARD.GGPLOT.LEGEND -->
+<div class="card-chartLegend">
+  <small class="chartLegendSquare" id="COR_DA_LEGENDA">LEGENDA 1</small>
+  <small class="chartLegendSquare" id="COR_DA_LEGENDA">LEGENDA 2</small>
+</div>
+```
+Para manter boa visualização online, cada linha pode conter apenas duas legendas. Para adicionar mais legendas adicione um novo bloco.
+
+A cor da legenda pode ser alterada substituindo `COR_DA_LEGENDA` por:
+```
+legendGrey
+legendBlue
+legendLightBlue
+legendDarkBlue
+legendPurple
+legendPink
+legendRed
+legendOrange
+legendYellow
+legendGreen
+legendTeal
+```
+
+##### 2.5 Texto justificado
 Modifique o texto de um card buscando por `<!-- CARD.TEXT -->` (ou pelo próprio texto) ou insira um novo bloco utilizando:
 ```
 <!-- CARD.TEXT -->
@@ -197,7 +234,14 @@ Modifique o texto de um card buscando por `<!-- CARD.TEXT -->` (ou pelo próprio
 </p>
 ```
 
-##### 2.4 Botão com link para outra página
+##### 2.6 Assinatura
+Modifique uma assinatura buscando por `<!-- CARD.SIGNATURE -->` ou insira uma nova utilizando:
+```
+<!-- CARD.SIGNATURE -->
+<div class="blockquote-footer text-right">Observatório COVID-19</div>
+```
+
+##### 2.7 Botão com link para outra página
 Modifique um botão buscando por `<!-- CARD.BUTTON -->` ou insira um novo utilizando:
 ```
 <!-- CARD.BUTTON -->
@@ -206,12 +250,19 @@ Modifique um botão buscando por `<!-- CARD.BUTTON -->` ou insira um novo utiliz
 </button></a>
 ```
 
-##### 2.5 Assinatura
-Modifique uma assinatura buscando por `<!-- CARD.SIGNATURE -->` ou insira uma nova utilizando:
+##### 2.8 Botão com texto escondido
+Modifique um botão que revela texto escondido buscando por `<!-- CARD.BUTTON.EXPAND -->` ou insira um novo utilizando:
 ```
-<!-- CARD.SIGNATURE -->
-<div class="blockquote-footer text-right">Observatório COVID-19</div>
+<!-- CARD.BUTTON.EXPAND -->
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseGraph" aria-expanded="false" aria-controls="collapseGraph">
+    TEXTO DO BOTÃO ▾
+</button>
+<!-- CARD.BUTTON.EXPAND.CONTENT -->
+<div class="collapse" id="collapseGraph">
+    <!-- CONTEÚDO ESCONDIDO AQUI-->
+</div>
 ```
+Em `<!-- CONTEÚDO ESCONDIDO AQUI-->` é possível inserir qualquer tipo de conteúdo descrito aqui: texto, imagens, assinaturas e etc.
 
 #### Adicionando cards em uma página
 Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a posição desejada.
