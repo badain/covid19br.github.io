@@ -195,8 +195,15 @@ Modifique o **título** buscando por `<!-- CARD.TITLE.TEXT -->` e substituindo `
 ##### 2. Conteúdo
 Existem múltiplos elementos de conteúdo que podem ser combinados livremente em um card:
 
-##### 2.1.1 Data de atualização (manual)
-Ao compilar o arquivo `update.R` a hora é atualizada automaticamente, mas, se necessário, modifique uma data de atualização manual buscando por `<!-- CARD.DATE.MANUAL -->` ou insira com o código a seguir:
+##### 2.1.1 Data de atualização (automatica)
+Ao compilar o arquivo `update.R` a hora é atualizada automaticamente. Insira o código a seguir para exibir o horário da última atualização dos gráficos:
+```
+<!-- CARD.DATE -->
+<p class="card-date"><small>Última atualização: DD/MM/AAAA HH:MM</small></p>
+```
+
+##### 2.1.2 Data de atualização (manual)
+Se necessário, modifique uma data de atualização manual buscando por `<!-- CARD.DATE.MANUAL -->` ou insira uma nova com o código a seguir:
 ```
 <!-- CARD.DATE.MANUAL -->
 <p class="card-date"><small>Última atualização: DD/MM/AAAA HH:MM</small></p>
