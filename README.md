@@ -83,8 +83,6 @@ install.packages("EpiEstim")
 
 Alguns avisos aparecem após a execução, e ela demora um pouco. Espere terminar, e se não houver erros, os arquivos `.html` estarão atualizados.
 
----
-
 ## Atualizando e criando novas páginas
 O arquivo `template.html` é um bom ponto de partida para criação de novas páginas. Ele inclui as barras de navegação superiores e inferiores pré-fabricadas, bem como a estrutura principal do corpo.
 A estrutura do site é composta por quatro principais grupos:
@@ -136,7 +134,16 @@ Substitua ```<!-- FOOTER.TEXT -->``` pelo texto desejado usando as tags ```<div>
 <!-- FOOTER.TEXT -->
 ```
 #### Adicionando texto com ícones
-Como o site inclui a [biblioteca de ícones Ionic](https://ionicons.com) é possível adicionar ícones seguidos de texto na barra inferior
+Como o site inclui a [biblioteca Ionicons](https://ionicons.com) é possível adicionar ícones seguidos de texto na barra inferior.
+Substitua ```<!-- FOOTER.TEXT -->``` pelo seguinte código, personalizando o texto e o ícone:
+```
+<div class="footer-content"> 
+  <ion-icon name="logo-github"></ion-icon>
+  <p class="mb-0 ml-1"><a href="Seu link aqui" target="_blank" class="text-reset">Seu texto aqui</a></p>
+</div>
+<!-- FOOTER.TEXT -->
+```
+Para trocar o ícone basta substituir `<ion-icon name="logo-github"></ion-icon>` pelo código do ícone desejado, obtido em [Ionicons](https://ionicons.com)
 
 ### Lembre-se
 Alterações nas barras superior e inferior devem ser incluidas em todos os arquivos .html para garantir consistência na navegação.
