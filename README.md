@@ -84,23 +84,20 @@ install.packages("EpiEstim")
 Alguns avisos aparecem após a execução, e ela demora um pouco. Espere terminar, e se não houver erros, os arquivos `.html` estarão atualizados.
 
 ## Atualizando e criando novas páginas
-O arquivo `template.html` é um bom ponto de partida para criação de novas páginas. Ele inclui as barras de navegação superiores e inferiores pré-fabricadas, bem como a estrutura principal.
+O arquivo `template.html` é um bom ponto de partida para criação de novas páginas. Ele inclui as barras de navegação superiores e inferiores pré-fabricadas, bem como a estrutura principal do corpo.
+A estrutura do site é composta por quatro principais grupos:
 
-### Adicionando novos blocos em uma página
+### 1. Barra Superior
+A barra superior é o elemento flutuante que inclui o logo, o menu de estados e o menu de paginas do site. 
 
-### Adicionando novas páginas
-
-### Alterando o título da página
-Busque por ```<!-- PAGE.TITLE -->``` e substitua o título desejado.
-
-### Adicionando itens no menu dos estados
+#### Adicionando itens no menu dos estados
 Inclua os dados do estado no código a seguir e use-o para substituir ```<!-- ESTADOS.ITEM -->``` no arquivo .html:
 ```
 <a class="dropdown-item" href="./siglaAqui.html">Nome do Estado</a>
 <!-- ESTADOS.ITEM -->
 ```
 
-### Adicionando itens no menu principal
+#### Adicionando itens no menu principal
 Inclua os dados da página no código a seguir e use-o para substituir ```<!-- MENU.ITEM -->``` no arquivo .html: 
 ```
 <li class="nav-item">
@@ -116,10 +113,19 @@ No arquivo .hmtl do próprio item, o código deve ser o seguinte para correta in
 <!-- MENU.ITEM -->
 ```
 
-### Alterando o logo do observatório
+#### Alterando o logo do observatório
 Busque por ```<!-- OBSERV.LOGO.IMAGEM -->``` e substitua o conteúdo de src="" pelo arquivo .svg desejado.
 
-### Barra inferior
+### 2. Título Principal
+Este grupo inclui o título principal da página e a data de atualização.
+#### Alterando o título da página
+Busque por ```<!-- PAGE.TITLE -->``` e substitua o título desejado.
+
+### 3. Cards de conteúdo
+Os cards armazenam todas as informações importantes do corpo da página.
+#### Adicionando novos cards em uma página
+
+### 4. Barra inferior
 #### Adicionando texto
 Substitua ```<!-- FOOTER.TEXT -->``` pelo texto desejado usando as tags ```<div>```
 ```
