@@ -134,4 +134,4 @@ Substitua ```<!-- FOOTER.TEXT -->``` pelo texto desejado usando as tags ```<div>
 <!-- FOOTER.TEXT -->
 ```
 ### Lembre-se
-Alterações nas barras superior e inferior devem ser incluidas em todos os arquivos .html para garatinr consistência na navegação.
+Alterações nas barras superior e inferior devem ser incluidas em todos os arquivos .html para garantir consistência na navegação.
