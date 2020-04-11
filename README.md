@@ -135,6 +135,7 @@ Substitua ```<!-- FOOTER.TEXT -->``` pelo texto desejado usando as tags ```<div>
 ```
 #### Adicionando texto com ícones
 Como o site inclui a [biblioteca Ionicons](https://ionicons.com) é possível adicionar ícones seguidos de texto na barra inferior.
+
 Substitua ```<!-- FOOTER.TEXT -->``` pelo seguinte código, personalizando o texto e o ícone:
 ```
 <div class="footer-content"> 
