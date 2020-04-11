@@ -9,7 +9,7 @@ Aqui você encontra os códigos para calcular as projeções e gerar os gráfico
   [Instalação do R 3.6.3 e RStudio](#Instalação-do-R-3.6.3-e-RStudio)<br>
   [Instalação das bibliotecas em R](#Instalação-das-bibliotecas-em-R)<br>
   [Como baixar e executar](#Como-baixar-e-executar)<br>
-  [Criando novos gráficos](#Criando-novos-gráficos)
+  [Criando novos gráficos](#Criando-novos-gráficos)<br>
   [Atualizando e criando novas páginas em html](#Atualizando-e-criando-novas-páginas)<br>
           
 ## Pré-requisitos
