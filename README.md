@@ -128,7 +128,7 @@ Os cards armazenam todas as informações importantes do corpo da página. Confo
 Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a posição desejada.
 
 #### Mudando a quantidade de colunas
-A quantidade de colunas é ajudatada automáticamente de acordo com a tela do dispositivo para permitir melhor navegação mobile. No entanto, caso deseje alterar manualmente
+A quantidade de colunas é ajustada automáticamente de acordo com a tela do dispositivo para permitir melhor navegação mobile. No entanto, caso deseje alterar manualmente
 o numero de colunas para telas a partir de 1200px de largura basta buscar por `<!-- COLUMNS.NUM -->` e substituir `<div class="card-columns">` pela tag desejada:
 ```
 <div class="card-columns-2"> <!-- Duas colunas -->
