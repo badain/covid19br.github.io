@@ -83,21 +83,24 @@ install.packages("EpiEstim")
 
 Alguns avisos aparecem após a execução, e ela demora um pouco. Espere terminar, e se não houver erros, os arquivos `.html` estarão atualizados.
 
-## Adicionando novos blocos em uma página
+## Atualizando e criando novas páginas
+O arquivo `template.html` é um bom ponto de partida para criação de novas páginas. Ele inclui as barras de navegação superiores e inferiores pré-fabricadas, bem como a estrutura principal.
 
-## Adicionando novas páginas
+### Adicionando novos blocos em uma página
 
-## Alterando o título da página
+### Adicionando novas páginas
+
+### Alterando o título da página
 Busque por ```<!-- PAGE.TITLE -->``` e substitua o título desejado.
 
-## Adicionando itens no menu dos estados
+### Adicionando itens no menu dos estados
 Inclua os dados do estado no código a seguir e use-o para substituir ```<!-- ESTADOS.ITEM -->``` no arquivo .html:
 ```
 <a class="dropdown-item" href="./siglaAqui.html">Nome do Estado</a>
 <!-- ESTADOS.ITEM -->
 ```
 
-## Adicionando itens no menu principal
+### Adicionando itens no menu principal
 Inclua os dados da página no código a seguir e use-o para substituir ```<!-- MENU.ITEM -->``` no arquivo .html: 
 ```
 <li class="nav-item">
@@ -113,11 +116,11 @@ No arquivo .hmtl do próprio item, o código deve ser o seguinte para correta in
 <!-- MENU.ITEM -->
 ```
 
-## Alterando o logo do observatório
+### Alterando o logo do observatório
 Busque por ```<!-- OBSERV.LOGO.IMAGEM -->``` e substitua o conteúdo de src="" pelo arquivo .svg desejado.
 
-## Barra inferior
-### Adicionando texto
+### Barra inferior
+#### Adicionando texto
 Substitua ```<!-- FOOTER.TEXT -->``` pelo texto desejado usando as tags ```<div>```
 ```
 <div>Seu texto aqui</div>
