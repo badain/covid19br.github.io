@@ -127,6 +127,15 @@ Os cards armazenam todas as informações importantes do corpo da página. Confo
 #### Adicionando cards em uma página
 Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a posição desejada.
 
+#### Mudando a quantidade de colunas
+A quantidade de colunas é ajudatada automáticamente de acordo com a tela do dispositivo para permitir melhor navegação mobile. No entanto, caso deseje alterar manualmente
+o numero de colunas para telas a partir de 1200px de largura basta buscar por `<!-- COLUMNS.NUM -->` e substituir `<div class="card-columns">` pela tag desejada:
+```
+<div class="card-columns-2"> <!-- Duas colunas -->
+<div class="card-columns-1"> <!-- Uma coluna -->
+```
+Este caso particular é utilizado para otimizar as páginas específicas de estados em telas de alta resolução.
+
 ### 4. Barra inferior
 A barra inferior é o elemento fixo no final da página.
 #### Adicionando texto
