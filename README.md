@@ -129,7 +129,7 @@ A estrutura básica de um card é formada por:
 ```
 <!-- NEW.CARD -->
 
-<!-- Nome do card -->
+<!-- Identificador do card -->
 <div class="card">
   <div class="card-body">        
     <!-- CONTEÚDO AQUI -->
