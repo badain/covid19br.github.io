@@ -1,0 +1,11 @@
+# Pacotes necessários para a execução do programa
+install.packages("ggplot2")
+install.packages("tidyverse")
+install.packages("plotly")
+install.packages("tidyr")
+install.packages("dplyr")
+install.packages("widgetframe")
+install.packages("rmarkdown")
+install.packages("zoo")
+install.packages("EpiEstim")
+install.packages("lubridate")

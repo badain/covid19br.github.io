@@ -1,17 +1,20 @@
 # covid19br.github.io
 Repositório do site [Observatório Covid-19 BR](https://covid19br.github.io/). 
 
-Aqui você encontra os códigos para calcular as projeções e gerar os gráficos, assim como os dados usados.
+Aqui você encontra os códigos para calcular as projeções e gerar os gráficos, assim como os dados usados. Se for alterar qualquer coisa no repositório, siga o tutorial abaixo.
+
+### Sumário
   
-## Como baixar e executar
+  [Pré-requisitos](#Pré-requisitos)<br>
+  [Instalação do R 3.6.3 e RStudio](#Instalação-do-R-3.6.3-e-RStudio)<br>
+  [Instalação das bibliotecas em R](#Instalação-das-bibliotecas-em-R)<br>
+  [Como baixar e executar](#Como-baixar-e-executar)<br>
+  [Criando novos gráficos](#Criando-novos-gráficos)
+  [Atualizando e criando novas páginas em html](#Atualizando-e-criando-novas-páginas)<br>
+          
+## Pré-requisitos
 
-Primeiro, clone o repositório em seu computador com `git clone`
-
-Para executar o programa, rode o `update.R` da linha de comando, mas antes, verifique a instalação das dependências necessárias.
-
-```bash
-$ Rscript update.R
-```
+Para rodar o programa, primeiro, clone o repositório em seu computador com `git clone`. Em seguida, serão necessárias instalações para que o programa compile.
 
 Provavelmente você vai precisar instalar:
 
@@ -19,7 +22,7 @@ Provavelmente você vai precisar instalar:
   - Rstudio
   - Bibliotecas de R
   
-Veja a seção a seguir de instalação.
+  Tutoriais e links estão disponíveis a seguir.
 
 ## Instalação do R 3.6.3 e RStudio
 
@@ -66,22 +69,44 @@ $ conda install -c conda-forge nodejs
 $ npm install -g electron@1.8.4 orca
 ```
 
-Para instalar o restante das bibliotecas necessárias, execute no console do R ou adicione antes de tudo no arquivo `update.R`:
+Para instalar o restante das bibliotecas necessárias, execute o arquivo "./_src/install_packages.R". São as bibliotecas a seguir:
 ```r
-# Copie no console. Se precisar de outra biblioteca, adicione aqui
 install.packages("ggplot2")
+install.packages("tidyverse")
 install.packages("plotly")
 install.packages("tidyr")
-install.packages("dplyr")´
+install.packages("dplyr")
 install.packages("widgetframe")
 install.packages("rmarkdown")
 install.packages("zoo")
 install.packages("EpiEstim")
+install.packages("lubridate")
 ```
 
-## Output do `update.R`
+Se por acaso precisar instalar novas bibliotecas, lembre-se de adicionar aqui e no arquivo.
 
-Alguns avisos aparecem após a execução, e ela demora um pouco. Espere terminar, e se não houver erros, os arquivos `.html` estarão atualizados.
+## Como baixar e executar
+
+Para executar o programa, rode o `update.R` da linha de comando, mas antes, verifique a instalação das dependências necessárias.
+
+```bash
+$ Rscript update.R
+```
+
+Alguns avisos aparecem após a execução, e ela demora um pouco. Espere terminar, e se não houver erros, os arquivos `.html` estarão atualizados, e podem ser vistos diretamente no navegador.
+
+É importante que ele seja compilado no terminal, pois precisa do Orca, e este não funciona compilado por `source`. É possível utilizar o terminal do RStudio.
+
+## Criando novos gráficos
+Após terminar de criar um gráfico novo, para que ele seja incluído no html, o primeiro passo é fazer com que ele seja transformado em imagem ".svg" e um código ".html" com ggplotly (que garante a interatividade do gráfico no site).
+
+No arquivo `render_graphs.R`, simplesmente adicione o nome do seu gráfico à lista de gráficos a serem renderizados:
+```r
+## No arquivo render_graphs.R
+# Graphs
+plots <- makeNamedList(..., seu.gráfico.ggplot) # Graficos a serem atualizados
+```
+IMPORTANTE: ele deve ser um ggplot. Ele deve ser codado no arquivo `plots.R`.
 
 ## Atualizando e criando novas páginas
 O arquivo `template.html` é um bom ponto de partida para criação de novas páginas. Ele inclui as barras de navegação superiores e inferiores pré-fabricadas, bem como a estrutura principal do corpo.
@@ -171,12 +196,11 @@ Modifique o **título** buscando por `<!-- CARD.TITLE.TEXT -->` e substituindo `
 Existem múltiplos elementos de conteúdo que podem ser combinados livremente em um card:
 
 ##### 2.1.1 Data de atualização (manual)
-Modifique uma data de atualização manual buscando por `<!-- CARD.DATE.MANUAL -->` ou insira com o código a seguir:
+Ao compilar o arquivo `update.R` a hora é atualizada automaticamente, mas, se necessário, modifique uma data de atualização manual buscando por `<!-- CARD.DATE.MANUAL -->` ou insira com o código a seguir:
 ```
 <!-- CARD.DATE.MANUAL -->
 <p class="card-date"><small>Última atualização: DD/MM/AAAA HH:MM</small></p>
 ```
-Nota: a data e hora devem ser entradas manualmente.
 
 ##### 2.2 Imagem estática com legenda
 Modifique uma imagem estática e sua legenda buscando por `<!-- CARD.IMAGE -->` ou insira uma nova com o código a seguir:
