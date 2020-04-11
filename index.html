@@ -96,39 +96,49 @@
 
     <!-- Cards -->
     <div class="card-columns"> <!-- COLUMNS.NUM -->
-      <!-- Mapa Card-->
-      <div class="card shadow-sm">
+      <!-- BRASIL.MAP.CARD -->
+      <div class="card">
         <div class="card-body">
-          <div class="media">
-            <img src="./img/icon_globe.svg" class="card-icon mr-3" width=64px alt="Avião sobrevoando o globo terrestre">
-            <div class="media-body">
-              <h5 class="card-title m-0">Dinâmicas de contágio</h5>
-              <p class="card-text">Como epidemias se espalham por um país continental?</p>
+            
+            <!-- CARD.HEADER -->
+            <div class="media">
+                <img src="./img/icon_globe.svg" class="card-icon" width=64px alt="Avião sobrevoando o globo terrestre"> <!-- CARD.TITLE.ICON -->
+                <div class="media-body">
+                    <h5 class="card-title">Dinâmicas de contágio</h5> <!-- CARD.TITLE.TEXT -->
+                    <p class="card-text">Como epidemias se espalham por um país continental?</p> <!-- CARD.TITLE.DESCRIPTION -->
+                </div>
             </div>
-          </div>
-          <p class="card-text"><small class="text-muted">Última atualização: 23/04/2021 17:34</small></p>
-        </div>
-        <img src="https://covid19br.github.io/fig/voos_brasil.jpg" class="card-img-top" alt="Gráfico de conexões sobre o mapa do Brasil que representa a dinâmica de propagação no país"> <!-- Todo: Compactar imagem -->
-        <p class="card-text legenda"><small>Os pontos representam estados brasileiros e as setas indicam a intensidade de vôos saindo de um estado e chegando em outro.</small></p>
-        <div class="card-body">
-          <p class="text-justify">
+
+            <!-- CARD.DATE.MANUAL -->
+            <p class="text-muted"><small>Última atualização: 23/04/2021 17:34</small></p>
+            
+            <!-- CARD.IMAGE -->
+            <img src="./fig/voos_brasil.jpg" class="card-img-top" alt="Gráfico de conexões sobre o mapa do Brasil que representa a dinâmica de propagação no país"> <!-- Todo: Compactar imagem -->
+            <p class="card-text legenda"><small>Os pontos representam estados brasileiros e as setas indicam a intensidade de vôos saindo de um estado e chegando em outro.</small></p>
+            
+            <!-- CARD.TEXT -->
+            <p class="text-justify">
             A chave pode estar na rede formada por aeroportos e vôos conectando os estados brasileiros.
             Portanto, a análise da estrutura dessa rede aérea pode nos ajudar a entender a propagação do COVID-19 por nosso país.
-          </p>
-
-          <!-- CARD.BUTTON -->
-          <a href="https://guimaraeslabbr.weebly.com/COVID19.html" target="_blank"><button class="btn btn-primary mt-1" type="button">
+            </p>
+    
+            <!-- CARD.BUTTON -->
+            <a href="https://guimaraeslabbr.weebly.com/COVID19.html" target="_blank"><button class="btn btn-primary mt-1" type="button">
             Leia mais sobre
-          </button></a>
-          <div class="blockquote-footer text-right">Observatório COVID-19</div>
+            </button></a>
+
+            <!-- CARD.SIGNATURE -->
+            <div class="blockquote-footer text-right">Observatório COVID-19</div>
+
         </div>
       </div>
 
       <!-- NEW.CARD -->
       
       <!-- Graph Card-->
-      <div class="card shadow-sm">
+      <div class="card">
         <div class="card-body">
+          
           <div class="media">
             <img src="./img/icon_virus.svg"  width=64px class="card-icon mr-3" alt="Corona Vírus"> <!-- Adicionar alt!-->
             <div class="media-body">
@@ -173,21 +183,26 @@
 
       <!-- NEW.CARD -->
       
-      <!-- Notice Card -->
+      <!-- DUPLICACAO.NOTA.CARD -->
       <div class="card">
         <div class="card-body">
+
           <!-- CARD.HEADER -->
           <h5 class="card-title">Quão rápido a doença se propaga?</h5>
 
-          <p class="card-text">
+          <!-- CARD.TEXT -->
+          <p class="text-justify">
             No momento não é possível estimar tempos de duplicação da epidemia, pois há um enorme acúmulo de testes moleculares sem resultados, necessários para que os casos sejam confirmados e notificados.
             Essa demora faz com que os números disponíveis publicamente (número de notificações) cresça de maneira artificialmente lenta.
           </p>
-          <p class="card-text">
+
+          <!-- CARD.TEXT -->
+          <p class="text-justify">
             Assim, a evolução do números oficiais informa hoje sobre a dinâmica de notificação, não da epidemia.
             Seria irresponsável seguir divulgando medidas de propagação da epidemia no Brasil com esses números.
           </p>
-
+          
+          <!-- CARD.DATE.MANUAL -->
           <p class="card-text text-muted"><small>Última atualização: 23/04/2021 17:34</small></p>
 
         </div>
