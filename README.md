@@ -289,7 +289,7 @@ Modifique um botão que revela texto escondido buscando por `<!-- CARD.BUTTON.EX
     TEXTO DO BOTÃO ▾
 </button>
 <!-- CARD.BUTTON.EXPAND.CONTENT -->
-<div class="collapse" id="collapseGraph">
+<div class="collapse mt-2" id="collapseGraph">
     <!-- CONTEÚDO ESCONDIDO AQUI-->
 </div>
 ```
