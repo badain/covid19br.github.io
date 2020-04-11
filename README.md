@@ -133,7 +133,7 @@ A estrutura básica de um card é formada por:
   </div>
 </div>
 ```
-Basta adicionar os conteúdos desejados em de acordo com os códigos pré-fabricados a seguir:
+Basta adicionar os conteúdos desejados em `<!-- CONTEÚDO AQUI -->` de acordo com os códigos pré-fabricados a seguir:
 
 #### Adicionando cards em uma página
 Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a posição desejada.
