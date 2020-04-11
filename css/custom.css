@@ -167,9 +167,26 @@ body {
     position: relative;
     margin: 0;
     padding-bottom: 40px; /* height of the footer (check on dev tools)*/
-  }
+}
   
-  footer {
+footer {
+    /* sticky bottom */
     position: absolute;
     bottom: 0;
-  }
+    /* item organization */
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-pack: distribute!important;
+    justify-content: space-around!important;
+    /* decoration */
+    color: #6c757d;
+    background-color: #f8f9fa;
+    padding: .5rem; /* footer SIZE */
+}
+
+.github {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}

@@ -105,7 +105,7 @@ Inclua os dados da página no código a seguir e use-o para substituir ```<!-- M
 </li>
 <!-- MENU.ITEM -->
 ```
-No arquivo .hmtl do próprio item, o código deve ser o seguinte para correta indicação:
+No arquivo .hmtl do próprio item, o código deve ser o seguinte para correta indicação da página ativa:
 ```
 <li class="nav-item active">
   <a class="nav-link" href="./ITEM.html">ITEM</a>
@@ -115,3 +115,11 @@ No arquivo .hmtl do próprio item, o código deve ser o seguinte para correta in
 
 ## Alterando o logo do observatório
 Busque por ```<!-- OBSERV.LOGO.IMAGEM -->``` e substitua o conteúdo de src="" pelo arquivo .svg desejado.
+
+## Barra inferior
+### Adicionando texto
+Substitua ```<!-- FOOTER.TEXT -->``` pelo texto desejado usando as tags ```<div>```
+```
+<div>Seu texto aqui</div>
+<!-- FOOTER.TEXT -->
+```
