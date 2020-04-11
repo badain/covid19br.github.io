@@ -70,9 +70,11 @@
     }
 }
 
-#update {
+.page-title-update {
     font-family: 'Poppins', sans-serif;
     font-size: .85rem;
+    color: #6c757d;
+    margin-left: .5rem
 }
 
 /* BUTTON */

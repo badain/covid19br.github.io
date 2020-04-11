@@ -91,13 +91,61 @@
 
     <!-- Titulo Principal -->
     <div class="container-fluid mt-2">
-      <h1 class="display" id="page-title">Visão Geral<small class="text-muted ml-2" id="update">Última atualização: 18:00 ⋅ 04/04/2020</small></h1> <!-- PAGE.TITLE -->
+      <h1 class="display" id="page-title">Visão Geral<small class="page-title-update">Última atualização:</small><small class="page-title-update updateDate"></small></h1> <!-- PAGE.TITLE -->
     </div>
 
     <!-- Cards -->
     <div class="card-columns"> <!-- COLUMNS.NUM -->
 
-      <!-- NEW.CARD -->
+      <!-- GRAPH.CARD -->
+      <div class="card">
+        <div class="card-body">        
+          <!-- CARD.HEADER -->
+          <div class="media">
+            <img src="./img/icon_virus.svg" width=64px alt="Desenho do coronavírus" class="card-icon"> <!-- CARD.TITLE.ICON -->
+            <div class="media-body">
+              <h5 class="card-title">Progressão da doença</h5> <!-- CARD.TITLE.TEXT -->
+              <p class="card-text">Quantos casos notificados já temos no Brasil? Quantos teremos nos próximos dias?</p> <!-- CARD.TITLE.DESCRIPTION -->
+            </div>
+          </div>
+
+          <!-- CARD.DATE.MANUAL -->
+          <p class="card-date"><small class="updateDate">Última atualização: </small></p>
+
+          <!-- CARD.GGPLOT -->
+          <div class="codegena_iframe" data-src="./graphs/plot.tempo.dupl.html" data-css="background:url('./img/loading.gif') white center center no-repeat;border:0px;"  data-responsive="true">
+            <img src=./graphs/plot.tempo.dupl.svg width="100%">
+          </div>
+          <script src="./js/async-iframe.js"></script>
+
+          <!-- CARD.GGPLOT.LEGEND -->
+          <div class="card-chartLegend">
+            <small class="chartLegendSquare" id="legendGrey">Casos Confirmados</small>
+            <small class="chartLegendSquare" id="legendBlue">Previsão</small>
+          </div>
+          
+          <!-- CARD.BUTTON.EXPAND -->
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseGraph" aria-expanded="false" aria-controls="collapseGraph">
+            Por que só 5 dias? ▾
+          </button>
+          <!-- CARD.BUTTON.EXPAND.CONTENT -->
+          <div class="collapse" id="collapseGraph">
+            <p class="text-justify">
+              Porque quando o crescimento é exponencial as <b>incertezas também crescem exponencialmente.</b>
+              Por isso a região cinza, que expressa a incerteza da previsão, aumenta de largura com o tempo.
+              E mesmo pequenas mudanças na taxa que aconteçam hoje ou amanhã vão causar enormes variações no futuro.
+            </p>
+            <p class="text-justify">
+              Por isso avaliamos que é inadequado fazer previsões para mais de 5 dias com este método.
+            </p>
+
+            <!-- CARD.SIGNATURE -->
+            <div class="blockquote-footer text-right">Observatório COVID-19</div>
+
+          </div>
+
+        </div>
+      </div>
 
     </div>
 
@@ -112,9 +160,10 @@
 
     <!-- JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS via BootstrapCDN-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> <!-- Ionic Icons -->
+    <script src="js/updateDate.js"></script>
   </body>
 </html>
