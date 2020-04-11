@@ -91,14 +91,14 @@ A estrutura do site é composta por quatro principais grupos:
 A barra superior é o elemento flutuante que inclui o logo, o menu de estados e o menu de paginas do site.
 
 #### Adicionando itens no menu dos estados
-Inclua os dados do estado no código a seguir e use-o para substituir ```<!-- ESTADOS.ITEM -->``` no arquivo .html:
+Inclua os dados do estado no código a seguir e use-o para substituir `<!-- ESTADOS.ITEM -->` no arquivo .html:
 ```
 <a class="dropdown-item" href="./siglaAqui.html">Nome do Estado</a>
 <!-- ESTADOS.ITEM -->
 ```
 
 #### Adicionando itens no menu principal
-Inclua os dados da página no código a seguir e use-o para substituir ```<!-- MENU.ITEM -->``` no arquivo .html: 
+Inclua os dados da página no código a seguir e use-o para substituir `<!-- MENU.ITEM -->` no arquivo .html: 
 ```
 <li class="nav-item">
   <a class="nav-link" href="./ITEM.html">ITEM</a>
@@ -114,12 +114,12 @@ No arquivo .hmtl do próprio item, o código deve ser o seguinte para correta in
 ```
 
 #### Alterando o logo do observatório
-Busque por ```<!-- OBSERV.LOGO.IMAGEM -->``` e substitua o conteúdo de `src=""` pelo arquivo .svg desejado.
+Busque por `<!-- OBSERV.LOGO.IMAGEM -->` e substitua o conteúdo de `src=""` pelo arquivo .svg desejado.
 
 ### 2. Título Principal
 Este grupo inclui o título principal da página e a data de atualização.
 #### Alterando o título da página
-Busque por ```<!-- PAGE.TITLE -->``` e substitua o conteúdo após `<h1 class="display">` pelo título desejado.
+Busque por `<!-- PAGE.TITLE -->` e substitua o conteúdo após `<h1 class="display">` pelo título desejado.
 
 ### 3. Cards de conteúdo
 Os cards armazenam todas as informações importantes do corpo da página.
@@ -128,7 +128,7 @@ Os cards armazenam todas as informações importantes do corpo da página.
 ### 4. Barra inferior
 A barra inferior é o elemento fixo no final da página.
 #### Adicionando texto
-Substitua ```<!-- FOOTER.TEXT -->``` pelo texto desejado usando as tags ```<div>```
+Substitua `<!-- FOOTER.TEXT -->` pelo texto desejado usando as tags `<div>`
 ```
 <div class="footer-content">Seu texto aqui</div>
 <!-- FOOTER.TEXT -->
@@ -136,7 +136,7 @@ Substitua ```<!-- FOOTER.TEXT -->``` pelo texto desejado usando as tags ```<div>
 #### Adicionando texto com ícones
 Como o site inclui a [biblioteca Ionicons](https://ionicons.com) é possível adicionar ícones seguidos de texto na barra inferior.
 
-Substitua ```<!-- FOOTER.TEXT -->``` pelo seguinte código, personalizando o texto e o ícone:
+Substitua `<!-- FOOTER.TEXT -->` pelo seguinte código, personalizando o texto e o ícone:
 ```
 <div class="footer-content"> 
   <ion-icon name="logo-github"></ion-icon>
