@@ -77,12 +77,10 @@
 
 /* CARDS */
 .card {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: .85rem;
-}
-
-.card-icon {
-    float: left;
+    padding: 1.25rem;
 }
 
 .card-columns {
@@ -124,6 +122,22 @@
     }
 }
 
+/* CARD CONTENT */
+.card-body {
+    padding: 0!important;
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    margin: 0!important;
+}
+
+.card-icon {
+    float: left;
+    margin-right: 1rem;
+}
+
 /* Mobile Devices */
 @media (max-width: 1199.98px) {
     .card-text {
@@ -135,11 +149,6 @@
     }
 }
 
-/* CARD CONTENT */
-.card-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.125rem;
-}
 
 .chartLegendSquare {
     font-family: 'Poppins', sans-serif;
@@ -168,6 +177,12 @@
 
 .chartLegendSquare#legendBlueDark:before {
     background-color: #0050a6;
+}
+
+.legenda {
+    text-align: center;
+    margin: 0 .5rem;
+    color: #6c757d;
 }
 
 /* GRAPH */

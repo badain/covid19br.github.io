@@ -124,6 +124,17 @@ Busque por `<!-- PAGE.TITLE -->` e substitua o conteúdo após `<h1 class="displ
 ### 3. Cards de conteúdo
 Os cards armazenam todas as informações importantes do corpo da página. Conforme mais cards de conteúdo são adicionados sua disposição é atualizada automáticamente.
 
+#### Criando um card
+A estrutura básica de um card é formada por:
+```
+<div class="card">
+  <div class="card-body">        
+    <!-- CONTEÚDO AQUI -->
+  </div>
+</div>
+```
+Basta adicionar os conteúdos desejados em de acordo com os códigos pré-fabricados a seguir:
+
 #### Adicionando cards em uma página
 Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a posição desejada.
 
