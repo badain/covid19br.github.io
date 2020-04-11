@@ -114,12 +114,12 @@ No arquivo .hmtl do próprio item, o código deve ser o seguinte para correta in
 ```
 
 #### Alterando o logo do observatório
-Busque por ```<!-- OBSERV.LOGO.IMAGEM -->``` e substitua o conteúdo de src="" pelo arquivo .svg desejado.
+Busque por ```<!-- OBSERV.LOGO.IMAGEM -->``` e substitua o conteúdo de `src=""` pelo arquivo .svg desejado.
 
 ### 2. Título Principal
 Este grupo inclui o título principal da página e a data de atualização.
 #### Alterando o título da página
-Busque por ```<!-- PAGE.TITLE -->``` e substitua o título desejado.
+Busque por ```<!-- PAGE.TITLE -->``` e substitua o conteúdo após `<h1 class="display">` pelo título desejado.
 
 ### 3. Cards de conteúdo
 Os cards armazenam todas as informações importantes do corpo da página.
