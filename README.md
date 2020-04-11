@@ -199,7 +199,7 @@ Existem múltiplos elementos de conteúdo que podem ser combinados livremente em
 Ao compilar o arquivo `update.R` a hora é atualizada automaticamente. Insira o código a seguir para exibir o horário da última atualização dos gráficos:
 ```
 <!-- CARD.DATE -->
-<p class="card-date"><small>Última atualização: DD/MM/AAAA HH:MM</small></p>
+<p class="card-date"><small class="updateDate">Última atualização: </small></p>
 ```
 
 ##### 2.1.2 Data de atualização (manual)
