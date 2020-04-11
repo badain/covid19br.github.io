@@ -128,11 +128,14 @@ Os cards armazenam todas as informações importantes do corpo da página. Confo
 A estrutura básica de um card é formada por:
 ```
 <!-- NEW.CARD -->
+
+<!-- Nome do card -->
 <div class="card">
   <div class="card-body">        
     <!-- CONTEÚDO AQUI -->
   </div>
 </div>
+
 <!-- NEW.CARD -->
 ```
 Basta adicionar os componentes desejados em `<!-- CONTEÚDO AQUI -->` de acordo com os códigos pré-fabricados a seguir:
