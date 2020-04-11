@@ -186,6 +186,17 @@ Modifique uma imagem estática e sua legenda buscando por `<!-- CARD.IMAGE -->` 
 <p class="card-text legenda"><small>BREVE LEGENDA AQUI</small></p> <!-- CARD.IMAGE.LEGENDA -->
 ```
 
+##### 2.3 Texto justificado
+Modifique o texto de um card buscando por `<!-- CARD.TEXT -->` (ou pelo próprio texto) ou insira um novo bloco utilizando:
+```
+<!-- CARD.TEXT -->
+<p class="text-justify">
+  Você deve escrever o seu texto aqui. O texto exibido será justificado.
+  Apesar de estar em outra linha, não há quebra de linha aqui. Caso precise de uma quebra
+  de linha, inclua outro bloco de texto.
+</p>
+```
+
 #### Adicionando cards em uma página
 Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a posição desejada.
 
