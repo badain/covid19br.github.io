@@ -9,15 +9,9 @@ Aqui você encontra os códigos para calcular as projeções e gerar os gráfico
   [Instalação do R 3.6.3 e RStudio](#Instalação-do-R-3.6.3-e-RStudio)<br>
   [Instalação das bibliotecas em R](#Instalação-das-bibliotecas-em-R)<br>
   [Como baixar e executar](#Como-baixar-e-executar)<br>
-  [Atualizando e criando novas páginas](#Atualizando-e-criando-novas-páginas)<br>
-      [1. Barra Superior](#1.-Barra-Superior)<br>
-      [2. Título Principal](#2.-Título-Principal)<br>
-      [3. Cards de conteúdo](#3.-Cards-de-conteúdo)<br>
-          [Criando um card](#Criando-um-card)<br>
+  [Criando novos gráficos](#Criando-novos-gráficos)
+  [Atualizando e criando novas páginas em html](#Atualizando-e-criando-novas-páginas)<br>
           
-      
-  
-  
 ## Pré-requisitos
 
 Para rodar o programa, primeiro, clone o repositório em seu computador com `git clone`. Em seguida, serão necessárias instalações para que o programa compile.
@@ -100,6 +94,19 @@ $ Rscript update.R
 ```
 
 Alguns avisos aparecem após a execução, e ela demora um pouco. Espere terminar, e se não houver erros, os arquivos `.html` estarão atualizados, e podem ser vistos diretamente no navegador.
+
+É importante que ele seja compilado no terminal, pois precisa do Orca, e este não funciona compilado por `source`. É possível utilizar o terminal do RStudio.
+
+## Criando novos gráficos
+Após terminar de criar um gráfico novo, para que ele seja incluído no html, o primeiro passo é fazer com que ele seja transformado em imagem ".svg" e um código ".html" com ggplotly (que garante a interatividade do gráfico no site).
+
+No arquivo `render_graphs.R`, simplesmente adicione o nome do seu gráfico à lista de gráficos a serem renderizados:
+```r
+## No arquivo render_graphs.R
+# Graphs
+plots <- makeNamedList(..., seu.gráfico.ggplot) # Graficos a serem atualizados
+```
+IMPORTANTE: ele deve ser um ggplot. Ele deve ser codado no arquivo `plots.R`.
 
 ## Atualizando e criando novas páginas
 O arquivo `template.html` é um bom ponto de partida para criação de novas páginas. Ele inclui as barras de navegação superiores e inferiores pré-fabricadas, bem como a estrutura principal do corpo.

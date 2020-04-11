@@ -4,6 +4,13 @@ library(tidyverse)
 library(plotly)
 library(lubridate)
 
+source("plots.R")
+
+# Date and time
+file<-file("../graphs/dataehora.txt")
+writeLines(c(paste(now())), file)
+close(file)
+
 # Functions
 makeNamedList <- function(...) {
   structure(list(...), names = as.list(substitute(list(...)))[-1L])
@@ -13,12 +20,6 @@ makeNamedList <- function(...) {
 plots <- makeNamedList(plot.tempo.dupl) # Graficos a serem atualizados
 filenames <- names(plots)
 n <- length(plots)
-
-now()
-
-file<-file("../graphs/dataehora.txt")
-writeLines(c(paste(now())), file)
-close(file)
 
 for (i in 1:n){
     graph <- ggplotly(plots[[i]])
