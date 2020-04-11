@@ -76,7 +76,6 @@
 }
 
 /* CARDS */
-
 .card {
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: .85rem;
@@ -84,6 +83,10 @@
 
 .card-icon {
     float: left;
+}
+
+.card-columns {
+    margin: 1rem!important;
 }
 
 /* Medium devices (tablets, less than 992px) */
