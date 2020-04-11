@@ -139,7 +139,8 @@ A estrutura básica de um card é formada por:
 <!-- NEW.CARD -->
 ```
 Basta adicionar os componentes desejados em `<!-- CONTEÚDO AQUI -->` de acordo com os códigos pré-fabricados a seguir:
-
+##### Títulos
+Títulos são identificados por `<!-- CARD.HEADER -->`
 ##### 1. Título com ícone
 Modifique o **ícone** buscando por `<!-- CARD.TITLE.ICON -->` e substituindo `NOME_DO_ARQUIVO.svg`. O ícone deve ser uma imagem em .svg.
 
