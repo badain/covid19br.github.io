@@ -125,7 +125,7 @@ Busque por `<!-- PAGE.TITLE -->` e substitua o conteúdo após `<h1 class="displ
 Os cards armazenam todas as informações importantes do corpo da página. Conforme mais cards de conteúdo são adicionados sua disposição é atualizada automáticamente.
 
 #### Adicionando cards em uma página
-Substitua `<!-- NEW.CARD -->` pelo código do seu card.
+Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a posição desejada.
 
 ### 4. Barra inferior
 A barra inferior é o elemento fixo no final da página.
