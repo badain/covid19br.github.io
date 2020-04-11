@@ -82,15 +82,6 @@
     margin-top: .25rem;
 }
 
-/* COLLAPSE */
-.show {
-    margin-top: 1rem;
-}
-
-.collapsing {
-    margin-top: 1rem;
-}
-
 /* CARDS */
 .card {
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
