@@ -89,7 +89,6 @@ A estrutura do site é composta por quatro principais grupos:
 
 ### 1. Barra Superior
 A barra superior é o elemento flutuante que inclui o logo, o menu de estados e o menu de paginas do site.
-Alterações na barra superior devem ser incluidas em todos os arquivos .html para garatinr consistência na navegação.
 
 #### Adicionando itens no menu dos estados
 Inclua os dados do estado no código a seguir e use-o para substituir ```<!-- ESTADOS.ITEM -->``` no arquivo .html:
@@ -127,9 +126,12 @@ Os cards armazenam todas as informações importantes do corpo da página.
 #### Adicionando novos cards em uma página
 
 ### 4. Barra inferior
+A barra inferior é o elemento fixo no final da página.
 #### Adicionando texto
 Substitua ```<!-- FOOTER.TEXT -->``` pelo texto desejado usando as tags ```<div>```
 ```
 <div>Seu texto aqui</div>
 <!-- FOOTER.TEXT -->
 ```
+### Lembre-se
+Alterações nas barras superior e inferior devem ser incluidas em todos os arquivos .html para garatinr consistência na navegação.
