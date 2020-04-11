@@ -167,7 +167,7 @@ Cada card distinto deve conter um identificador distinto em `<!-- Identificador 
 
 Basta adicionar os componentes desejados em `<!-- CONTEÚDO AQUI -->` de acordo com os códigos pré-fabricados a seguir:
 ##### 1. Títulos dos cards
-Títulos são identificados por `<!-- CARD.HEADER -->`
+Títulos são identificados por `<!-- CARD.HEADER -->` *Atenção!* Títulos também devem ser inclusos no **conteúdo** do card.
 ##### 1.1 Título com ícone
 Modifique o **ícone** buscando por `<!-- CARD.TITLE.ICON -->` e substituindo `NOME_DO_ARQUIVO.svg`. O ícone deve ser uma imagem em .svg.
 
