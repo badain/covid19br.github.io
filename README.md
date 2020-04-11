@@ -226,23 +226,23 @@ o numero de colunas para telas a partir de 1200px de largura basta buscar por `<
 Este caso particular é utilizado para otimizar as páginas específicas de estados em telas de alta resolução.
 
 ### 4. Barra inferior
-A barra inferior é o elemento fixo no final da página.
+A barra inferior é o elemento fixo no final da página e pode conter múltiplos itens.
 #### Adicionando texto
-Substitua `<!-- FOOTER.TEXT -->` pelo texto desejado usando as tags `<div>`
+Substitua `<!-- FOOTER.ITEM -->` pelo texto desejado usando as tags `<div>`
 ```
 <div class="footer-content">Seu texto aqui</div>
-<!-- FOOTER.TEXT -->
+<!-- FOOTER.ITEM -->
 ```
 #### Adicionando texto com ícones
 Como o site inclui a [biblioteca Ionicons](https://ionicons.com) é possível adicionar ícones seguidos de texto na barra inferior.
 
-Substitua `<!-- FOOTER.TEXT -->` pelo seguinte código, personalizando o texto e o ícone:
+Substitua `<!-- FOOTER.ITEM -->` pelo seguinte código, personalizando o texto e o ícone:
 ```
 <div class="footer-content"> 
   <ion-icon name="logo-github"></ion-icon>
   <p class="mb-0 ml-1"><a href="Seu link aqui" target="_blank" class="text-reset">Seu texto aqui</a></p>
 </div>
-<!-- FOOTER.TEXT -->
+<!-- FOOTER.ITEM -->
 ```
 Para trocar o ícone basta substituir `<ion-icon name="logo-github"></ion-icon>` pelo código do ícone desejado, obtido em [Ionicons](https://ionicons.com)
 
