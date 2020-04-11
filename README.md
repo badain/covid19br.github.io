@@ -135,16 +135,21 @@ A estrutura básica de um card é formada por:
 </div>
 <!-- NEW.CARD -->
 ```
-Basta adicionar os conteúdos desejados em `<!-- CONTEÚDO AQUI -->` de acordo com os códigos pré-fabricados a seguir:
+Basta adicionar os componentes desejados em `<!-- CONTEÚDO AQUI -->` de acordo com os códigos pré-fabricados a seguir:
 
-##### Adicionando um título com ícone lateral ao card
+##### 1. Título com ícone
+Modifique o ícone buscando por `<!-- CARD.TITLE.ICON -->` e substituindo `NOME_DO_ARQUIVO.svg`. O ícone deve ser uma imagem em .svg.
+
+Modifique o título buscando por `<!-- CARD.TITLE.TEXT -->` e substituindo `TITULO DO CARD`
+
+Modifique a descrição do card buscando por `<!-- CARD.TITLE.DESCRIPTION -->` e substituindo `BREVE DESCRICAO`
 ```
 <!-- CARD.HEADER -->
 <div class="media">
-  <img src="./img/icon_globe.svg" class="card-icon" width=64px alt="Avião sobrevoando o globo terrestre"> <!-- CARD.TITLE.ICON -->
+  <img src="./img/NOME_DO_ARQUIVO.svg" width=64px alt="Descrição p/ acessibilidade" class="card-icon"> <!-- CARD.TITLE.ICON -->
   <div class="media-body">
-    <h5 class="card-title">Dinâmicas de contágio</h5> <!-- CARD.TITLE.TEXT -->
-    <p class="card-text">Como epidemias se espalham por um país continental?</p> <!-- CARD.TITLE.DESCRIPTION -->
+    <h5 class="card-title">TITULO DO CARD</h5> <!-- CARD.TITLE.TEXT -->
+    <p class="card-text">BREVE DESCRICAO</p> <!-- CARD.TITLE.DESCRIPTION -->
   </div>
 </div>
 ```
