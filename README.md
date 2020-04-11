@@ -197,6 +197,22 @@ Modifique o texto de um card buscando por `<!-- CARD.TEXT -->` (ou pelo próprio
 </p>
 ```
 
+##### 2.4 Botão com link para outra página
+Modifique um botão buscando por `<!-- CARD.BUTTON -->` ou insira um novo utilizando:
+```
+<!-- CARD.BUTTON -->
+<a href="LINK PARA A PÁGINA" target="_blank"><button class="btn btn-primary mt-1" type="button">
+  TEXTO DO BOTÃO
+</button></a>
+```
+
+##### 2.5 Assinatura
+Modifique uma assinatura buscando por `<!-- CARD.SIGNATURE -->` ou insira uma nova utilizando:
+```
+<!-- CARD.SIGNATURE -->
+<div class="blockquote-footer text-right">Observatório COVID-19</div>
+```
+
 #### Adicionando cards em uma página
 Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a posição desejada.
 
