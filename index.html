@@ -41,72 +41,50 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light border-bottom shadow-sm bg-white">
-      <!-- Dropdown Menu-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <!-- BOTAO DO MENU -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Logo -->
-      <a class="navbar-brand mr-auto" href="#"> <!-- mr-auto fixes logo on the right -->
-        <img class="navbar-logo" src="./img/logo.svg"></img>
-        <h1 class="text-hide mb-0">Observatório COVID-19</h1> <!-- SEO -->
+
+      <!-- LOGO -->
+      <a class="navbar-brand" href="#">
+        <img class="navbar-logo" src="./img/logo.svg"></img> <!-- OBSERV.LOGO.IMAGEM -->
       </a>
-      <!-- Dropdown -->
+
+      <!-- ESTADOS -->
       <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Brasil
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Brasil</a>
+            <a class="dropdown-item" href="./brasil.html">Brasil</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">São Paulo</a>
-            <a class="dropdown-item" href="#">Rio de Janeiro</a>
-            <!--  
-            <a class="dropdown-item" href="#">AC</a>
-            <a class="dropdown-item" href="#">AL</a>
-            <a class="dropdown-item" href="#">AM</a>
-            <a class="dropdown-item" href="#">AP</a>
-            <a class="dropdown-item" href="#">BA</a>
-            <a class="dropdown-item" href="#">CE</a>
-            <a class="dropdown-item" href="#">DF</a>
-            <a class="dropdown-item" href="#">ES</a>
-            <a class="dropdown-item" href="#">GO</a>
-            <a class="dropdown-item" href="#">MA</a>
-            <a class="dropdown-item" href="#">MG</a>
-            <a class="dropdown-item" href="#">MS</a>
-            <a class="dropdown-item" href="#">MT</a>
-            <a class="dropdown-item" href="#">PA</a>
-            <a class="dropdown-item" href="#">PB</a>
-            <a class="dropdown-item" href="#">PE</a>
-            <a class="dropdown-item" href="#">PI</a>
-            <a class="dropdown-item" href="#">PR</a>
-            <a class="dropdown-item" href="#">RJ</a>
-            <a class="dropdown-item" href="#">RN</a>
-            <a class="dropdown-item" href="#">RO</a>
-            <a class="dropdown-item" href="#">RR</a>
-            <a class="dropdown-item" href="#">RS</a>
-            <a class="dropdown-item" href="#">SC</a>
-            <a class="dropdown-item" href="#">SE</a>
-            <a class="dropdown-item" href="#">SP</a>
-            <a class="dropdown-item" href="#">TO</a>
-            -->
+            <a class="dropdown-item" href="./sp.html">São Paulo</a>
+            <a class="dropdown-item" href="./rj.html">Rio de Janeiro</a>
+            <!-- ESTADOS.ITEM -->
           </div>
       </div>
-      <!-- Collapsable -->
+      
+      <!-- MENU -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Visão Geral</a>
+              <a class="nav-link" href="https://covid19br.github.io">Visão Geral</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Fontes</a>
+              <a class="nav-link" href="./fontes.html">Fontes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Informações Técnicas</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
+                <a class="nav-link" href="./informacoes.html">Informações Técnicas</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./midia.html">Reportagens</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sobre.html">Sobre</a>
+            </li>
+            <!-- MENU.ITEM -->
           </ul>
       </div>
     </nav>
@@ -236,11 +214,12 @@
     </div>
 
     <!-- Footer -->
-    <footer class="container-fluid bg-light p-2 d-flex justify-content-around text-muted">
-      <div class="d-flex align-items-center"> 
-        <ion-icon name="logo-github"></ion-icon>
-        <p class="mb-0 ml-1"><a href="https://github.com/covid19br/covid19br.github.io" target="_blank" class="text-reset">Source Code</a></p>
+    <footer class="container-fluid">
+      <div class="footer-content"> 
+          <ion-icon name="logo-github"></ion-icon>
+          <p class="mb-0 ml-1"><a href="https://github.com/covid19br/covid19br.github.io" target="_blank" class="text-reset">Source Code</a></p>
       </div>
+      <!-- FOOTER.TEXT -->
     </footer>
 
     <!-- JavaScript -->

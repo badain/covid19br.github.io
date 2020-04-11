@@ -122,7 +122,7 @@ Este grupo inclui o título principal da página e a data de atualização.
 Busque por `<!-- PAGE.TITLE -->` e substitua o conteúdo após `<h1 class="display">` pelo título desejado.
 
 ### 3. Cards de conteúdo
-Os cards armazenam todas as informações importantes do corpo da página.
+Os cards armazenam todas as informações importantes do corpo da página. Conforme mais cards de conteúdo são adicionados sua disposição é atualizada atuomáticamente.
 #### Adicionando novos cards em uma página
 
 ### 4. Barra inferior
