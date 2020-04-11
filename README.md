@@ -138,6 +138,8 @@ A estrutura básica de um card é formada por:
 
 <!-- NEW.CARD -->
 ```
+Cada card distinto deve conter um identificador distinto em `<!-- Identificador do card -->` para facilitar sua edição.
+
 Basta adicionar os componentes desejados em `<!-- CONTEÚDO AQUI -->` de acordo com os códigos pré-fabricados a seguir:
 ##### 1. Títulos
 Títulos são identificados por `<!-- CARD.HEADER -->`
@@ -163,6 +165,25 @@ Modifique o **título** buscando por `<!-- CARD.TITLE.TEXT -->` e substituindo `
 ```
 <!-- CARD.HEADER -->
 <h5 class="card-title">TITULO DO CARD</h5> <!-- CARD.TITLE.TEXT -->
+```
+
+##### 2. Conteúdo
+Existem múltiplos elementos de conteúdo que podem ser combinados livremente em um card:
+
+##### 2.1.1 Data de atualização (manual)
+Modifique uma data de atualização manual para seu card buscando por `<!-- CARD.DATE.MANUAL -->` ou insira com o código a seguir:
+```
+<!-- CARD.DATE.MANUAL -->
+<p class="text-muted"><small>Última atualização: DD/MM/AAAA HH:MM</small></p>
+```
+Nota: a data e hora devem ser entradas manualmente.
+
+##### 2.2 Imagem estática com legenda
+Modifique uma imagem estática e sua legenda buscando por `<!-- CARD.IMAGE -->` ou insira uma nova com o código a seguir:
+```
+<!-- CARD.IMAGE -->
+<img src="./fig/NOME_DO_ARQUIVO.jpg" class="card-img-top" alt="DESCRIÇÃO ACESSÍVEL"> 
+<p class="card-text legenda"><small>BREVE LEGENDA AQUI</small></p> <!-- CARD.IMAGE.LEGENDA -->
 ```
 
 #### Adicionando cards em uma página
