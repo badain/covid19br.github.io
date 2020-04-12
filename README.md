@@ -302,8 +302,8 @@ Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a 
 A quantidade de colunas é ajustada automáticamente de acordo com a tela do dispositivo para permitir melhor navegação mobile. No entanto, caso deseje alterar manualmente
 o numero de colunas para telas a partir de 1200px de largura basta buscar por `<!-- COLUMNS.NUM -->` e substituir `<div class="card-columns">` pela tag desejada:
 ```
-<div class="card-columns-2"> <!-- Duas colunas -->
-<div class="card-columns-1"> <!-- Uma coluna -->
+<div class="card-columns two"> <!-- Duas colunas -->
+<div class="card-columns one"> <!-- Uma coluna -->
 ```
 Este caso particular é utilizado para otimizar as páginas específicas de estados em telas de alta resolução.
 

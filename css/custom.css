@@ -95,37 +95,30 @@
 }
 
 @media (min-width: 1200px) {
-    .card-columns-1 {
-        column-count: 1;
+    .one {
+        column-count: 1!important;
         width: 65%;
-        margin: 1rem auto;
+        margin: 1rem auto!important;
     }
-    .card-columns-1 .card {
-        display: inline-block;
-        width: 100%;
-        margin-bottom: .75rem;
-    }
-    .card-columns-2 {
-        column-count: 2;
-    }
-    .card-columns-2 .card {
-        display: inline-block;
-        width: 100%;
-        margin-bottom: .75rem;
+    .two {
+        column-count: 2!important;
     }
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
     .card-columns {
-        column-count: 1!important;
+        column-count: 1;
     }
 }
 
 /* Small devices (large devices, 992px and up) to (extra large devices, up to 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .card-columns {
-        column-count: 2!important;
+        column-count: 2;
+    }
+    .one {
+        column-count: 1!important;
     }
 }
 
