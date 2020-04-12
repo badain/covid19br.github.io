@@ -143,6 +143,11 @@
     margin-bottom: 0!important;
 }
 
+.card-img-top {
+    display: block;
+    margin: 0 auto;
+}
+
 /* Mobile Devices */
 @media (max-width: 1199.98px) {
     .card-text {
