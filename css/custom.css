@@ -118,14 +118,14 @@
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
     .card-columns {
-        column-count: 1;
+        column-count: 1!important;
     }
 }
 
 /* Small devices (large devices, 992px and up) to (extra large devices, up to 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .card-columns {
-        column-count: 2;
+        column-count: 2!important;
     }
 }
 
