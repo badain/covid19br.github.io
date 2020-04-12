@@ -189,7 +189,7 @@ Modifique a **descrição** do card buscando por `<!-- CARD.TITLE.DESCRIPTION --
 Modifique o **título** buscando por `<!-- CARD.TITLE.TEXT -->` e substituindo `TITULO DO CARD`
 ```
 <!-- CARD.HEADER -->
-<h5 class="card-title">TITULO DO CARD</h5> <!-- CARD.TITLE.TEXT -->
+<h5 class="card-title mb-3">TITULO DO CARD</h5> <!-- CARD.TITLE.TEXT -->
 ```
 
 ##### 2. Conteúdo
