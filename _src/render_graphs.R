@@ -17,7 +17,7 @@ makeNamedList <- function(...) {
 }
 
 # Graphs
-plots <- makeNamedList(plot.tempo.dupl) # Graficos a serem atualizados
+plots <- makeNamedList(plot.tempo.dupl, est.tempo.dupl, proj.num.casos) # Graficos a serem atualizados
 filenames <- names(plots)
 n <- length(plots)
 

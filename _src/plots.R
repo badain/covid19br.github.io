@@ -3,6 +3,9 @@ library(dplyr)
 library(tidyr)
 library(zoo)
 library(EpiEstim)
+library(tableHTML)
+library(knitr)
+library(DT)
 
 
 ################################################################################
@@ -113,3 +116,53 @@ for (st in names(estados.d0)){
 #    scale_x_date( date_labels = "%d/%b", name="") +
 #    ylab("Número de casos") +
 #    plot.formatos
+
+
+################################################################################
+## Estimativa tempo de duplicação
+################################################################################
+
+exemplo1 <- window(brasil, start="2020-03-07",end="2020-03-11")
+ex.fit <- fitP.exp(exemplo1$casos.acumulados, only.coef=FALSE)
+exemplo1$pred <- predict(ex.fit, type="response")
+est.tempo.dupl <- ggplot(exemplo1,
+                    aes(Index, casos.acumulados)) +
+                    geom_point(size=2, color="darkblue") +
+                    geom_line(aes(Index, pred)) +
+                    scale_x_date(date_labels = "%d/%b", name="") +
+                    ylab("log (Número de casos)") +
+                    scale_y_log10() +
+                    plot.formatos
+
+################################################################################
+## Projeções de número de casos 
+################################################################################
+
+ex.forecast <- forecast.exponential(exemplo1$casos.acumulados,
+                                    start=as.Date("2020-03-07"),
+                                    days.forecast = 5)
+exemplo2 <- window(brasil, start="2020-03-07", end="2020-03-16")
+exemplo2 <- merge(exemplo2,
+                  zoo(data.frame(pred=predict(ex.fit, newdata=data.frame(ndias=0:10), type="response")),
+                      time(exemplo2)))              
+proj.num.casos <- ggplot(data= exemplo2, aes(Index, casos.acumulados)) +
+                    geom_point(size=2, color="darkblue") +
+                    geom_line(aes(Index, pred)) +
+                    geom_ribbon(data=ex.forecast, aes(y=predito, ymin=ic.low, ymax=ic.upp), alpha=0.2) +
+                    scale_x_date(date_labels = "%d/%b", name="") +
+                    ylab("log (Número de casos)") +
+                    scale_y_log10() +
+                    plot.formatos
+
+################################################################################
+## Série temporal dos tempos de duplicação
+################################################################################
+ex.dt <- dt.rw(brasil.d0[1:10], window.width =5)
+ex.dt$coef  <-  round(ex.dt$coef,1)
+ex.dt$coef.low  <- round(ex.dt$coef.low,1)
+ex.dt$coef.upp  <- round(ex.dt$coef.upp,1)
+ex.dt.df <- as.data.frame(ex.dt[,c(1,3,2)])
+rownames(ex.dt.df) <- format(as.Date(rownames(ex.dt.df)), "%d/%m/%Y")
+serie.temp.table <- kable(ex.dt.df, col.names=c("Estimado", "IC-inferior", "IC-superior"),
+      caption="Estimativas dos tempos de duplicação do número de casos de COVID-19 para o Brasil, para período de 5 dias, a partir de 07 de março de 2020. Indicados os valores estimados e os limites inferiores e superiores do intervalo de confiança a 95%. As datas em cada linha da tabela são os dias do final de cada período.")
+write_tableHTML(tableHTML(mtcars), file = './graphs/serie_temp_table.html')
