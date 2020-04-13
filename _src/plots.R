@@ -2,11 +2,10 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 library(zoo)
-library(EpiEstim)
-library(tableHTML)
+library(EpiEstim) 
+library(kableExtra)
+library(readr)
 library(knitr)
-library(DT)
-
 
 ################################################################################
 ## Parametros de formatacao comum aos plots
@@ -137,6 +136,9 @@ est.tempo.dupl <- ggplot(exemplo1,
 ################################################################################
 ## Projeções de número de casos 
 ################################################################################
+source('prepara_dados.R')
+source('ajuste_projecao_exponencial.R')
+source("funcoes.R")
 
 ex.forecast <- forecast.exponential(exemplo1$casos.acumulados,
                                     start=as.Date("2020-03-07"),
@@ -163,6 +165,7 @@ ex.dt$coef.low  <- round(ex.dt$coef.low,1)
 ex.dt$coef.upp  <- round(ex.dt$coef.upp,1)
 ex.dt.df <- as.data.frame(ex.dt[,c(1,3,2)])
 rownames(ex.dt.df) <- format(as.Date(rownames(ex.dt.df)), "%d/%m/%Y")
-serie.temp.table <- kable(ex.dt.df, col.names=c("Estimado", "IC-inferior", "IC-superior"),
-      caption="Estimativas dos tempos de duplicação do número de casos de COVID-19 para o Brasil, para período de 5 dias, a partir de 07 de março de 2020. Indicados os valores estimados e os limites inferiores e superiores do intervalo de confiança a 95%. As datas em cada linha da tabela são os dias do final de cada período.")
-write_tableHTML(tableHTML(mtcars), file = './graphs/serie_temp_table.html')
+serie.temp.table <- kable(ex.dt.df, "html", col.names=c("Estimado", "IC-inferior", "IC-superior"),
+      caption="Estimativas dos tempos de duplicação do número de casos de COVID-19 para o Brasil, para período de 5 dias, a partir de 07 de março de 2020. Indicados os valores estimados e os limites inferiores e superiores do intervalo de confiança a 95%. As datas em cada linha da tabela são os dias do final de cada período.",
+      pagetitle = "09")
+write_file(serie.temp.table, "tabela_serie_temporal.html")
