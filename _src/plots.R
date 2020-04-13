@@ -136,10 +136,6 @@ est.tempo.dupl <- ggplot(exemplo1,
 ################################################################################
 ## Projeções de número de casos 
 ################################################################################
-source('prepara_dados.R')
-source('ajuste_projecao_exponencial.R')
-source("funcoes.R")
-
 ex.forecast <- forecast.exponential(exemplo1$casos.acumulados,
                                     start=as.Date("2020-03-07"),
                                     days.forecast = 5)
