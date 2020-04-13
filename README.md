@@ -34,7 +34,7 @@ E atualize o R.
 
 Para instalar o Rstudio, primeiro, entre [aqui](https://rstudio.com/products/rstudio/download/) e baixe o Rstudio Desktop
 
-[Outras instruções] (https://uvastatlab.github.io/phdplus/installR.html) caso a instalação não funcione
+[Outras instruções](https://uvastatlab.github.io/phdplus/installR.html) caso a instalação não funcione
 
 ## Instalação das bibliotecas em R
 
@@ -73,6 +73,7 @@ Para instalar o restante das bibliotecas necessárias, execute o arquivo "./_src
 ```r
 install.packages("ggplot2")
 install.packages("tidyverse")
+install.packages("knitr")
 install.packages("plotly")
 install.packages("tidyr")
 install.packages("dplyr")
@@ -81,6 +82,7 @@ install.packages("rmarkdown")
 install.packages("zoo")
 install.packages("EpiEstim")
 install.packages("lubridate")
+install.packages("tableHTML")
 ```
 
 Se por acaso precisar instalar novas bibliotecas, lembre-se de adicionar aqui e no arquivo.
@@ -294,6 +296,18 @@ Modifique um botão que revela texto escondido buscando por `<!-- CARD.BUTTON.EX
 </div>
 ```
 Em `<!-- CONTEÚDO ESCONDIDO AQUI-->` é possível inserir qualquer tipo de conteúdo descrito aqui: texto, imagens, assinaturas e etc.
+
+##### 2.9 Equação matemática
+
+No final do template está comentado os scripts para equação matemática. No seu arquivo, descomente-os.
+
+```html
+<!-- SCRIPT PARA USAR MATHJAX E ESCREVER EQUAÇÕES
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script> -->
+```
+
+Para escrever a equação `\( EQUAÇÃO NA FORMA LATEX AQUI \) `
 
 #### Adicionando cards em uma página
 Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a posição desejada.

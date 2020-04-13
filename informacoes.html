@@ -105,10 +105,10 @@
           <h5 class="card-title">Estimativa do tempo de duplicação</h5> <!-- CARD.TITLE.TEXT -->
           <!-- CARD.TEXT -->
           <p class="text-justify">
-            No início das epidemias o número de infectados cresce exponencialmente, o que implica que o tempo para que o número de casos duplique é constante em ln(2)/r (MATH EQ), onde r é a taxa de crescimento de número de casos. Um crescimento exponencial a taxa constante também implica em uma relação linear entre o logaritmo do número de casos e o tempo. Essa expectativa em geral vale para pequenos intervalos de tempo, na fase inicial de epidemias. É o que vemos para o Brasil, por exemplo, nos cincos dias a partir do dia em que o número de casos chegou a 15 (gráfico ao lado)
+            No início das epidemias o número de infectados cresce exponencialmente, o que implica que o tempo para que o número de casos duplique é constante em \(\ln(2)/r\), onde \(r\) é a taxa de crescimento de número de casos. Um crescimento exponencial a taxa constante também implica em uma relação linear entre o logaritmo do número de casos e o tempo. Essa expectativa em geral vale para pequenos intervalos de tempo, na fase inicial de epidemias. É o que vemos para o Brasil, por exemplo, nos cincos dias a partir do dia em que o número de casos chegou a 15 (gráfico ao lado)
           </p>
           <p class="text-justify">
-            A linha reta no gráfico mostra o previsto por um modelo linear em escala log para dados de contagem <a href="#ref1">¹</a>, ajustado a estes dados. Esse modelo estima o valor da taxa de crescimento da epidemia neste período (r), com a qual estimamos o tempo de duplicação.
+            A linha reta no gráfico mostra o previsto por um modelo linear em escala log para dados de contagem <a href="#ref1">¹</a>, ajustado a estes dados. Esse modelo estima o valor da taxa de crescimento da epidemia neste período (\(r\), com a qual estimamos o tempo de duplicação.
           </p>
         </div>
       </div>
@@ -215,13 +215,13 @@
           <h5 class="card-title">Estimativa do Número de Reprodução da Epidemia</h5> <!-- CARD.TITLE.TEXT -->
           <!-- CARD.TEXT -->
           <p class="text-justify">
-            Em epidemiologia, uma das medidas mais importantes é o número reprodutivo basal ou razão de reprodução básica (R0)[MATHEQ]. Essa medida indica o número de casos secundários que um indivíduo infeccioso pode gerar em uma população totalmente suscetível. Apesar de ser muito útil para avaliar o potencial de propagação de doenças infecciosas em diferentes contextos, R0[MATHEQ] é uma medida teórica. Com a propagação de doenças infecciosas com altas taxas de transmissibilidade, muitas pessoas se infectam e, em diversos casos, indivíduos que já foram infectados podem tornar-se resistentes, não pertencendo mais ao grupo de suscetíveis. Neste momento, a premissa de uma população totalmente suscetível passa a não ser mais uma boa aproximação da realidade e uma nova medida epidemiológica faz-se necessária. Essa medida é o número reprodutivo efetivo ou razão de reprodução efetiva (Re)[MATHEQ]. Esse número indica o número de casos secundários produzidos em uma população na qual nem todos são suscetíveis.
+            Em epidemiologia, uma das medidas mais importantes é o número reprodutivo basal ou razão de reprodução básica (\(R_0\)). Essa medida indica o número de casos secundários que um indivíduo infeccioso pode gerar em uma população totalmente suscetível. Apesar de ser muito útil para avaliar o potencial de propagação de doenças infecciosas em diferentes contextos, \(R_0\) é uma medida teórica. Com a propagação de doenças infecciosas com altas taxas de transmissibilidade, muitas pessoas se infectam e, em diversos casos, indivíduos que já foram infectados podem tornar-se resistentes, não pertencendo mais ao grupo de suscetíveis. Neste momento, a premissa de uma população totalmente suscetível passa a não ser mais uma boa aproximação da realidade e uma nova medida epidemiológica faz-se necessária. Essa medida é o número reprodutivo efetivo ou razão de reprodução efetiva (\(R_e\)). Esse número indica o número de casos secundários produzidos em uma população na qual nem todos são suscetíveis.
           </p>
           <p class="text-justify">
-            Para analisar a dinâmica instantânea de uma doença infecciosa que tem potencial de infectar grande parte da população, o valor de Re[MATHEQ] calculado ao longo do tempo pode informar o quão crítico é o atual estágio de uma epidemia. Podemos calcular o Re[MATHEQ] utilizando séries temporais de dados de incidência (novos casos a cada dia, semana, etc) e a distribuição do intervalo serial, definido como o intervalo de tempo entre o início da doença em um caso primário e o início da doença em um caso secundário. O intervalo serial é uma medida difícil de ser obtida, principalmente para doenças infecciosas com pouco estudo epidemiológico. Para contornar esse problema, pode-se estimar o valor de Re[MATHEQ] considerando incertezas na medida do intervalo serial.
+            Para analisar a dinâmica instantânea de uma doença infecciosa que tem potencial de infectar grande parte da população, o valor de \(R_e\) calculado ao longo do tempo pode informar o quão crítico é o atual estágio de uma epidemia. Podemos calcular o \(R_e\) utilizando séries temporais de dados de incidência (novos casos a cada dia, semana, etc) e a distribuição do intervalo serial, definido como o intervalo de tempo entre o início da doença em um caso primário e o início da doença em um caso secundário. O intervalo serial é uma medida difícil de ser obtida, principalmente para doenças infecciosas com pouco estudo epidemiológico. Para contornar esse problema, pode-se estimar o valor de \(R_e\) considerando incertezas na medida do intervalo serial.
           </p>
           <p class="text-justify">
-            Usamos a série temporal dos últimos 7 dias da epidemia de COVID-19 para estimar diariamente os valores de Re[MATHEQ], utilizando a metodologia de Wallinga e Teunis (2004)<a href="#ref2">²</a> e implementada no pacote EpiEstim do software R (Cori 2020). Para a medida de intervalo serial, utilizamos uma distribuição log-normal truncada com média 4.8 (IC 95%, 3.8 - 6.1) e desvio padrão 2.3 (IC 95%, 1.6 - 3.5) em conformidade com o estudo Nishiura et al. (2020)<a href="#ref3">³</a>.
+            Usamos a série temporal dos últimos 7 dias da epidemia de COVID-19 para estimar diariamente os valores de \(R_e\), utilizando a metodologia de Wallinga e Teunis (2004)<a href="#ref2">²</a> e implementada no pacote EpiEstim do software R (Cori 2020). Para a medida de intervalo serial, utilizamos uma distribuição log-normal truncada com média 4.8 (IC 95%, 3.8 - 6.1) e desvio padrão 2.3 (IC 95%, 1.6 - 3.5) em conformidade com o estudo Nishiura et al. (2020)<a href="#ref3">³</a>.
           </p>
         </div>
       </div>
@@ -269,5 +269,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> <!-- Ionic Icons -->
     <script src="js/updateDate.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
   </body>
 </html>
