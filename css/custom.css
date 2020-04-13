@@ -84,6 +84,11 @@
     margin-left: .5rem;
 }
 
+/* Dropdown */
+.dropdown, .dropleft, .dropright, .dropup {
+    display: inline-block;
+}
+
 /* BUTTON */
 .btn {
     margin-top: .25rem;
