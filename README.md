@@ -298,7 +298,6 @@ Modifique um botão que revela texto escondido buscando por `<!-- CARD.BUTTON.EX
 Em `<!-- CONTEÚDO ESCONDIDO AQUI-->` é possível inserir qualquer tipo de conteúdo descrito aqui: texto, imagens, assinaturas e etc.
 
 ##### 2.9 Equação matemática
-
 No final do template está comentado os scripts para equação matemática. No seu arquivo, descomente-os.
 
 ```html
@@ -308,6 +307,18 @@ No final do template está comentado os scripts para equação matemática. No s
 ```
 
 Para escrever a equação `\( EQUAÇÃO NA FORMA LATEX AQUI \) `
+
+##### 2.10 Tabelas automáticas
+No arquivo template.html o script necessário para utilizar tabelas criadas no R está comentado. Descomente-o apenas em páginas cujo uso de tabelas é necessário.
+```html
+<!-- SCRIPT PARA USAR TABELAS 
+    <script src="js/updateTable.js"></script> -->
+```
+
+```
+<!-- CARD.AUTO.TABLE -->
+<include src="https://raw.githubusercontent.com/badain/covid19br.github.io/master/_src/tabela_serie_temporal.html">Carregando...</include>
+```
 
 #### Adicionando cards em uma página
 Substitua qualquer `<!-- NEW.CARD -->` pelo código do seu card de acordo com a posição desejada.
