@@ -112,10 +112,18 @@ var estados =
         }
     ];
 
-
-function getUFCode(current) {
+function getUFCode(verbose) {
     for (i = 0; i < estados.length; i++) {
-        if(estados[i].verbose == current) return(estados[i].uf);
+        if(estados[i].verbose == verbose) return(estados[i].uf);
+    }
+
+    // UF not found: returns to SP
+    return("sp");
+}
+
+function getVerbose(uf) {
+    for (i = 0; i < estados.length; i++) {
+        if(estados[i].uf == uf) return(estados[i].verbose);
     }
 
     // UF not found: returns to SP
@@ -136,8 +144,19 @@ function hasUF(split_src) {
     return(false);
 }
 
-function setActive() {
-    // getURL();
+function setActive(active) {
+    // cleans
+    $(".dropdown-item").removeClass("active");
+    
+    // updates
+    var selector = ".dropdown-item:contains(" + active + ")";
+    $(selector).addClass("active");
+}
+
+function setRequest(uf) {
+    state = getVerbose(uf);
+    $("#page-title").text(state);
+    setActive(state);
 }
 
 function updateGraphs() {
@@ -198,8 +217,14 @@ function updateGraphs() {
     $(".placeholder_svg").attr("src", new_svg);
 }
 
+/* Main */
+
 // First Load
-setActive();
+// Sets requested state on #page-title via hash URL
+var requested = $(location).attr('hash').substring(1);
+if(requested.length == 2) setRequest(requested);
+
+// Updates states based on #page-title
 updateGraphs();
 
 // JQuery OnClick Update
@@ -210,9 +235,7 @@ $(".dropdown-item").click(function () {
         $("#page-title").text($(this).text());
 
         // troca o estado ativo
-        $(".dropdown-item").removeClass("active");
-        var selector = ".dropdown-item:contains(" + $(this).text() + ")";
-        $(selector).addClass("active");
+        setActive($(this).text());
 
         // troca os gráficos
         updateGraphs();
