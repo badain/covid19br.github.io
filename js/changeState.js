@@ -3,122 +3,213 @@
 var estados =
     [
         {
-            uf: "SP",
+            uf: "sp",
             verbose: "São Paulo"
         },
         {
-            uf: "RJ",
+            uf: "rj",
             verbose: "Rio de Janeiro"
         },
         {
-            uf: "AC",
+            uf: "ac",
             verbose: "Acre"
         },
         {
-            uf: "AL",
+            uf: "al",
             verbose: "Alagoas"
         },
         {
-            uf: "AP",
+            uf: "ap",
             verbose: "Amapá"
         },
         {
-            uf: "AM",
+            uf: "am",
             verbose: "Amazonas"
         },
         {
-            uf: "BA",
+            uf: "ba",
             verbose: "Bahia"
         },
         {
-            uf: "CE",
+            uf: "ce",
             verbose: "Ceará"
         },
         {
-            uf: "DF",
+            uf: "df",
             verbose: "Distrito Federal"
         },
         {
-            uf: "ES",
+            uf: "es",
             verbose: "Espírito Santo"
         },
         {
-            uf: "GO",
+            uf: "go",
             verbose: "Goiás"
         },
         {
-            uf: "MA",
+            uf: "ma",
             verbose: "Maranhão"
         },
         {
-            uf: "MT",
+            uf: "mt",
             verbose: "Mato Grosso"
         },
         {
-            uf: "MS",
+            uf: "ms",
             verbose: "Mato Grosso do Sul"
         },
         {
-            uf: "MG",
+            uf: "mg",
             verbose: "Minas Gerais"
         },
         {
-            uf: "PA",
+            uf: "pa",
             verbose: "Pará"
         },
         {
-            uf: "PB",
+            uf: "pb",
             verbose: "Paraíba"
         },
         {
-            uf: "PR",
+            uf: "pr",
             verbose: "Paraná"
         },
         {
-            uf: "PE",
+            uf: "pe",
             verbose: "Pernambuco"
         },
         {
-            uf: "PI",
+            uf: "pi",
             verbose: "Piauí"
         },
         {
-            uf: "RN",
+            uf: "rn",
             verbose: "Rio Grande do Norte"
         },
         {
-            uf: "RS",
+            uf: "rs",
             verbose: "Rio Grande do Sul"
         },
         {
-            uf: "RO",
+            uf: "ro",
             verbose: "Rondônia"
         },
         {
-            uf: "RR",
+            uf: "rr",
             verbose: "Roraima"
         },
         {
-            uf: "SC",
+            uf: "sc",
             verbose: "Santa Catarina"
         },
         {
-            uf: "SE",
+            uf: "se",
             verbose: "Sergipe"
         },
         {
-            uf: "TO",
+            uf: "to",
             verbose: "Tocantins"
         }
     ];
 
-function getUF(current) {
+function getUFCode(current) {
     for (i = 0; i < estados.length; i++) {
         if(estados[i].verbose == current) return(estados[i].uf);
     }
 
     // UF not found: returns to SP
-    return("SP");
+    return("sp");
 }
 
-var current = $("#page-title").text()
+function getCurrentUF() {
+    var current = $("#page-title").text()
+    return(getUFCode(current));
+}
+
+function hasUF(split_src) {
+    // verifica se existe codigo uf no penultimo index
+    for (i = 0; i < estados.length; i++) {
+        if(estados[i].uf == split_src[(split_src.length - 2)]) return(true);
+    }
+    
+    return(false);
+}
+
+function setActive() {
+
+}
+
+function updateGraphs() {
+    // Get Current State
+    const current_uf = getCurrentUF();
+
+    // Get Graph's SRCs
+    var graph_src = $(".codegena_iframe").attr("data-src");
+    var graph_svg = $(".placeholder_svg").attr("src");
+
+    // Process Current Graph's SRC
+    var split_src = graph_src.split('.');
+    var split_svg = graph_svg.split('.');
+
+    // remove UF
+    var new_src = "";
+    var new_svg = "";
+
+    if(hasUF(split_src)) {
+        for(i=0; i<split_src.length; i++) {
+            if(i == (split_src.length - 2)) {
+                new_src = new_src + "." + current_uf;
+                new_svg = new_svg + "." + current_uf;
+            }
+            else {
+                if(i==0) {
+                    new_src = new_src + split_src[i];
+                    new_svg = new_svg + split_svg[i];
+                }
+                else {
+                    new_src = new_src + "." + split_src[i];
+                    new_svg = new_svg + "." + split_svg[i];
+                }
+            }
+        }
+    }
+    else {
+        for(i=0; i<split_src.length; i++) {
+            if(i == (split_src.length - 2)) {
+                new_src = new_src + "." + split_src[i] + "." + current_uf;
+                new_svg = new_svg + "." + split_svg[i] + "." + current_uf;
+            }
+            else {
+                if(i==0) {
+                    new_src = new_src + split_src[i];
+                    new_svg = new_svg + split_svg[i];
+                }
+                else {
+                    new_src = new_src + "." + split_src[i];
+                    new_svg = new_svg + "." + split_svg[i];
+            }
+            }
+        }
+    }
+    
+    // Update SRCs
+    $(".codegena_iframe").attr("data-src", new_src);
+    $(".placeholder_svg").attr("src", new_svg);
+}
+
+// Main
+setActive();
+updateGraphs();
+
+$(".dropdown-item").click(function () {
+    // se nao eh o item atual
+    if(!$(this).hasClass("active")) {
+        // troca o titulo
+        $("#page-title").text($(this).text());
+        // troca o estado ativo
+        $(".dropdown-item").removeClass("active");
+        $(this).addClass("active");
+        // troca os gráficos
+        updateGraphs();
+    }
+})
