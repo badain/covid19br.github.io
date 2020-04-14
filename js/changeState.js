@@ -11,6 +11,10 @@ var estados =
             verbose: "Rio de Janeiro"
         },
         {
+            uf: "br",
+            verbose: "Brasil",
+        },
+        {
             uf: "ac",
             verbose: "Acre"
         },
