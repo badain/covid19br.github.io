@@ -219,16 +219,24 @@ Modifique uma imagem estática e sua legenda buscando por `<!-- CARD.IMAGE -->` 
 <p class="card-text legenda"><small>BREVE LEGENDA AQUI</small></p> <!-- CARD.IMAGE.LEGENDA -->
 ```
 
-##### 2.3 GGPlot interativo
+##### 2.3 Gráfico GGPlot interativo
 Modifique um GGPlot interativo buscando por `<!-- CARD.GGPLOT -->` ou insira um novo utilizando:
 ```
 <!-- CARD.GGPLOT -->
-<div class="codegena_iframe" data-src="./graphs/IDENTIFICADOR.DO.GRAFICO.html" data-css="background:url('./img/loading.gif') white center center no-repeat;border:0px;"  data-responsive="true">
-  <img src=./graphs/IDENTIFICADOR.DO.GRAFICO.svg width="100%">
-</div>
+  <div data-src="./graphs/IDENTIFICADOR.DO.GRAFICO.html" class="codegena_iframe" data-css="background:url('./img/loading.gif') white center center no-repeat;border:0px;"  data-responsive="true">
+    <img src=./graphs/IDENTIFICADOR.DO.GRAFICO.svg class="placeholder_svg" width="100%">
+  </div>
 <script src="./js/async-iframe.js"></script>
 ```
 Nota: `IDENTIFICADOR.DO.GRAFICO` deve ser substituído pelo mesmo identificador utilizado na geração do gráfico em `render_graphs.R`
+Nota 2: Para correto funcionamento na página `estados.html`, os gráficos devem ser salvos no R com seguinte nomenclatura:
+```
+IDENTIFICADOR.GRÁFICO.UF
+```
+Porém ao incluí-los no código HTML é necessário omitir o código UF:
+```
+IDENTIFICADOR.GRÁFICO
+```
 
 ##### 2.4 Legenda de gráfico
 Modifique a legenda de um gráfico buscando por `<!-- CARD.GGPLOT.LEGEND -->` ou insira uma nova utilizando:
