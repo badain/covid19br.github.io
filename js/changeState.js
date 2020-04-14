@@ -112,6 +112,7 @@ var estados =
         }
     ];
 
+
 function getUFCode(current) {
     for (i = 0; i < estados.length; i++) {
         if(estados[i].verbose == current) return(estados[i].uf);
@@ -136,7 +137,7 @@ function hasUF(split_src) {
 }
 
 function setActive() {
-
+    // getURL();
 }
 
 function updateGraphs() {
@@ -197,18 +198,22 @@ function updateGraphs() {
     $(".placeholder_svg").attr("src", new_svg);
 }
 
-// Main
+// First Load
 setActive();
 updateGraphs();
 
+// JQuery OnClick Update
 $(".dropdown-item").click(function () {
     // se nao eh o item atual
     if(!$(this).hasClass("active")) {
         // troca o titulo
         $("#page-title").text($(this).text());
+
         // troca o estado ativo
         $(".dropdown-item").removeClass("active");
-        $(this).addClass("active");
+        var selector = ".dropdown-item:contains(" + $(this).text() + ")";
+        $(selector).addClass("active");
+
         // troca os gráficos
         updateGraphs();
     }
