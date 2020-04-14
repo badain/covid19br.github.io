@@ -3,7 +3,6 @@ library(dplyr)
 library(tidyr)
 library(zoo)
 library(EpiEstim) 
-library(kableExtra)
 library(readr)
 library(knitr)
 

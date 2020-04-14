@@ -4,8 +4,6 @@ library(tidyverse)
 library(plotly)
 library(lubridate)
 
-source("plots.R")
-
 # Date and time
 file<-file("../graphs/dataehora.txt")
 writeLines(c(paste(now())), file)

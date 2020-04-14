@@ -82,7 +82,7 @@ install.packages("rmarkdown")
 install.packages("zoo")
 install.packages("EpiEstim")
 install.packages("lubridate")
-install.packages("tableHTML")
+install.packages("readr")
 ```
 
 Se por acaso precisar instalar novas bibliotecas, lembre-se de adicionar aqui e no arquivo.
