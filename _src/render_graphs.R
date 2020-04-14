@@ -15,7 +15,7 @@ makeNamedList <- function(...) {
 }
 
 # Graphs
-plots <- makeNamedList(plot.tempo.dupl, est.tempo.dupl, proj.num.casos) # Graficos a serem atualizados
+plots <- makeNamedList(plot.forecast.exp, plot.tempo.dupl, est.tempo.dupl, proj.num.casos) # Graficos a serem atualizados
 filenames <- names(plots)
 n <- length(plots)
 
@@ -26,4 +26,15 @@ for (i in 1:n){
     saveWidget(frameableWidget(graph), file = paste(filepath,".html",sep=""), libdir="./libs") # Interative Graph
 #   comand <- paste('rm -r ',filepath,sep="") ## por algum motivo o saveWidget ignora o parametro selfContained
 #   system(paste(comand,'_files',sep=""))
+}
+
+estados.para.atualizar <- c('SP', 'RJ')
+
+estados.para.atualizar
+
+for (st in estados.para.atualizar) {
+  graph <- ggplotly(estados.plot.forecast.exp[[st]])
+  filepath <- paste("../graphs/plot.forecast.exp.", st, sep="")
+  orca(graph, paste(filepath,".svg",sep="")) # Static Graph
+  saveWidget(frameableWidget(graph), file = paste(filepath,".html",sep=""), libdir="./libs") # Interative Graph
 }
