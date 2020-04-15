@@ -4,114 +4,142 @@ var estados =
     [
         {
             uf: "sp",
+            prep: "em",
             verbose: "São Paulo"
         },
         {
             uf: "rj",
+            prep: "no",
             verbose: "Rio de Janeiro"
         },
         {
             uf: "br",
+            prep: "no",
             verbose: "Brasil",
         },
         {
             uf: "ac",
+            prep: "no",
             verbose: "Acre"
         },
         {
             uf: "al",
+            prep: "em",
             verbose: "Alagoas"
         },
         {
             uf: "ap",
+            prep: "no",
             verbose: "Amapá"
         },
         {
             uf: "am",
+            prep: "no",
             verbose: "Amazonas"
         },
         {
             uf: "ba",
+            prep: "na",
             verbose: "Bahia"
         },
         {
             uf: "ce",
+            prep: "no",
             verbose: "Ceará"
         },
         {
             uf: "df",
+            prep: "no",
             verbose: "Distrito Federal"
         },
         {
             uf: "es",
+            prep: "em",
             verbose: "Espírito Santo"
         },
         {
             uf: "go",
+            prep: "em",
             verbose: "Goiás"
         },
         {
             uf: "ma",
+            prep: "no",
             verbose: "Maranhão"
         },
         {
             uf: "mt",
+            prep: "em",
             verbose: "Mato Grosso"
         },
         {
             uf: "ms",
+            prep: "em",
             verbose: "Mato Grosso do Sul"
         },
         {
             uf: "mg",
+            prep: "em",
             verbose: "Minas Gerais"
         },
         {
             uf: "pa",
+            prep: "no",
             verbose: "Pará"
         },
         {
             uf: "pb",
+            prep: "na",
             verbose: "Paraíba"
         },
         {
             uf: "pr",
+            prep: "no",
             verbose: "Paraná"
         },
         {
             uf: "pe",
+            prep: "em",
             verbose: "Pernambuco"
         },
         {
             uf: "pi",
+            prep: "no",
             verbose: "Piauí"
         },
         {
             uf: "rn",
+            prep: "no",
             verbose: "Rio Grande do Norte"
         },
         {
             uf: "rs",
+            prep: "no",
             verbose: "Rio Grande do Sul"
         },
         {
             uf: "ro",
+            prep: "em",
             verbose: "Rondônia"
         },
         {
             uf: "rr",
+            prep: "em",
             verbose: "Roraima"
         },
         {
             uf: "sc",
+            prep: "em",
             verbose: "Santa Catarina"
         },
         {
             uf: "se",
+            prep: "em",
             verbose: "Sergipe"
         },
         {
             uf: "to",
+            prep: "em",
             verbose: "Tocantins"
         }
     ];
@@ -139,6 +167,14 @@ function getCurrentUF() {
     return(getUFCode(current));
 }
 
+function getPreposicao(verbose) {
+    for (i = 0; i < estados.length; i++) {
+        if(estados[i].verbose == verbose) return(estados[i].prep);
+    }
+
+    return("em");
+}
+
 function hasUF(split_src) {
     // verifica se existe codigo uf no penultimo index
     for (i = 0; i < estados.length; i++) {
@@ -159,18 +195,15 @@ function setActive(active) {
 
 function setRequest(uf) {
     state = getVerbose(uf);
+
+    // Updates text
     $("#page-title").text(state);
+    $(".card-state-text").text(getPreposicao(state) + " " + state);
+
+    // Updates dropdown
     setActive(state);
 }
 
-function loadIframe(iframeName, url) {
-    var $iframe = $('#' + iframeName);
-    if ( $iframe.length ) {
-        $iframe.attr('src',url);   
-        return false;
-    }
-    return true;
-}
 function updateWidget() {
     // Get Current State
     const current_uf = getCurrentUF();
@@ -278,12 +311,15 @@ updateStatic();
 $(".dropdown-item").click(function () {
     // se nao eh o item atual
     if(!$(this).hasClass("active")) {
-        // troca o titulo
-        $("#page-title").text($(this).text());
+        var state = $(this).text();
+        
+        // troca o titulo o card-text
+        $("#page-title").text(state);
+        $(".card-state-text").text(getPreposicao(state) + " " + state);
 
         // troca o estado ativo
-        setActive($(this).text());
-
+        setActive(state);
+    
         // troca os gráficos
         if($(".placeholder_svg").length) updateStatic();
 

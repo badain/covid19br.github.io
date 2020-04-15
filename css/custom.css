@@ -155,6 +155,18 @@
     margin-bottom: 0!important;
 }
 
+.card-text {
+    display: inline;
+}
+
+.card-state-text {
+    display: inline;
+}
+
+.text-justify {
+    display: inline;
+}
+
 .card-img-top {
     display: block;
     margin: 0 auto;
