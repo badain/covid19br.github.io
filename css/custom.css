@@ -135,6 +135,9 @@ body {
     .card-columns {
         column-count: 2;
     }
+    .three-one {
+        column-count: 1!important;
+    }
     .one {
         column-count: 1!important;
     }
