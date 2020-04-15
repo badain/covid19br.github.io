@@ -155,15 +155,12 @@
     margin-bottom: 0!important;
 }
 
-.card-text {
-    display: inline;
-}
 
 .card-state-text {
     display: inline;
 }
 
-.text-justify {
+.inline {
     display: inline;
 }
 
