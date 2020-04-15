@@ -1,309 +1,355 @@
 <!doctype html> <!-- HTML 5 doctype -->
-<html lang="pt"> 
-  <head>
-    <!-- Description meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="O Observatório COVID-19 BR é uma iniciativa independente com o desejo de disseminar informações de qualidade sobre o coronavírus, baseada em dados científicos atualizados."> <!-- SEO: https://support.google.com/webmasters/answer/35624?hl=en#meta-descriptions -->
-    <title>Observatório COVID-19 BR</title>
+<html lang="pt">
 
-    <!-- Bootstrap CSS via BootstrapCDN -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> <!-- Poppins Font -->
-    <link href="./css/custom.css" rel="stylesheet">
+<head>
+  <!-- Description meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="O Observatório COVID-19 BR é uma iniciativa independente com o desejo de disseminar informações de qualidade sobre o coronavírus, baseada em dados científicos atualizados.">
+  <!-- SEO: https://support.google.com/webmasters/answer/35624?hl=en#meta-descriptions -->
+  <title>Observatório COVID-19 BR</title>
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180"> <!-- SEO: Adicionar favicons-->
-    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
-    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#007bff">
+  <!-- Bootstrap CSS via BootstrapCDN -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet"> <!-- Poppins Font -->
+  <link href="./css/custom.css" rel="stylesheet">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image"> <!-- SEO: Adicionar imagens de redes sociais -->
-    <meta name="twitter:title" content="Observatório COVID-19 BR">
-    <meta name="twitter:description" content="Grupo de cientistas brasileiros com um objetivo: espalhar ciência e conter o vírus!">
-    <meta name="twitter:image" content="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-social.png">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <!-- SEO: Adicionar favicons-->
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+  <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#007bff">
 
-    <!-- Facebook -->
-    <meta property="og:url" content="https://covid19br.github.io">
-    <meta property="og:title" content="Bootstrap">
-    <meta property="og:description" content="Grupo de cientistas brasileiros com um objetivo: espalhar ciência e conter o vírus!">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="http://getbootstrap.com/docs/4.4/assets/brand/bootstrap-social.png">
-    <meta property="og:image:secure_url" content="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-social.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-  </head>
-  <body>
-    <!-- Barra Superior -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <!-- BOTAO DO MENU -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"> <!-- SEO: Adicionar imagens de redes sociais -->
+  <meta name="twitter:title" content="Observatório COVID-19 BR">
+  <meta name="twitter:description"
+    content="Grupo de cientistas brasileiros com um objetivo: espalhar ciência e conter o vírus!">
+  <meta name="twitter:image" content="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-social.png">
 
-      <!-- LOGO -->
-      <a class="navbar-brand" href="./index.html">
-        <img class="navbar-logo" src="./img/logo.svg"></img> <!-- OBSERV.LOGO.IMAGEM -->
+  <!-- Facebook -->
+  <meta property="og:url" content="https://covid19br.github.io">
+  <meta property="og:title" content="Bootstrap">
+  <meta property="og:description"
+    content="Grupo de cientistas brasileiros com um objetivo: espalhar ciência e conter o vírus!">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://getbootstrap.com/docs/4.4/assets/brand/bootstrap-social.png">
+  <meta property="og:image:secure_url" content="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-social.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+</head>
+
+<body>
+  <!-- Barra Superior -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <!-- BOTAO DO MENU -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- LOGO -->
+    <a class="navbar-brand" href="./index.html">
+      <img class="navbar-logo" src="./img/logo.svg"></img> <!-- OBSERV.LOGO.IMAGEM -->
+    </a>
+
+    <!-- ESTADOS -->
+    <div class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Visão Detalhada
       </a>
-
-      <!-- ESTADOS -->
-      <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Visão Detalhada
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="./estados.html#br">Brasil</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="./estados.html#sp">São Paulo</a>
-            <a class="dropdown-item" href="./estados.html#rj">Rio de Janeiro</a>
-            <!-- ESTADOS.ITEM -->
-          </div>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="./estados.html#br">Brasil</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="./estados.html#sp">São Paulo</a>
+        <a class="dropdown-item" href="./estados.html#rj">Rio de Janeiro</a>
+        <!-- ESTADOS.ITEM -->
       </div>
-      
-      <!-- MENU -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html">Visão Geral</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./fontes.html">Fontes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./informacoes.html">Informações Técnicas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./perguntas.html">Perguntas Comuns</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./midia.html">Reportagens</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./sobre.html">Sobre</a>
-            </li>
-            <!-- MENU.ITEM -->
-          </ul>
-      </div>
-    </nav>
-
-
-    <!-- Date & Hour -->
-    <div class="container-fluid mt-2">
-      <div class="main-title"><h1 class="display" id="page-title">Visão Geral</h1><small class="page-title-update updateDate">Última atualização: </small></div> <!-- PAGE.TITLE -->
     </div>
 
-    <!-- Cards -->
-    <div class="card-columns"> <!-- COLUMNS.NUM -->
+    <!-- MENU -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Visão Geral</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./fontes.html">Fontes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./informacoes.html">Informações Técnicas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./perguntas.html">Perguntas Comuns</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./midia.html">Reportagens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./sobre.html">Sobre</a>
+        </li>
+        <!-- MENU.ITEM -->
+      </ul>
+    </div>
+  </nav>
 
-      <!-- BRASIL.MAP.CARD -->
-      <div class="card">
-          <div class="card-body">
-              
-              <!-- CARD.HEADER -->
-              <div class="media">
-                  <img src="./img/icon_globe.svg" class="card-icon" width=64px alt="Avião sobrevoando o globo terrestre"> <!-- CARD.TITLE.ICON -->
-                  <div class="media-body">
-                      <h5 class="card-title">Dinâmicas de contágio</h5> <!-- CARD.TITLE.TEXT -->
-                      <p class="card-text">Como epidemias se espalham por um país continental?</p> <!-- CARD.TITLE.DESCRIPTION -->
-                  </div>
-              </div>
 
-              <!-- CARD.DATE -->
-              <p class="card-date"><small class="updateDate">Última atualização: </small></p>
-              
-              <!-- CARD.IMAGE -->
-              <img src="./fig/voos_brasil.jpg" class="card-img-top" alt="Gráfico de conexões sobre o mapa do Brasil que representa a dinâmica de propagação no país"> <!-- Todo: Compactar imagem -->
-              <p class="card-text legenda"><small>Os pontos representam estados brasileiros e as setas indicam a intensidade de vôos saindo de um estado e chegando em outro.</small></p>
-              
-              <!-- CARD.TEXT -->
-              <p class="text-justify">
-              A chave pode estar na rede formada por aeroportos e vôos conectando os estados brasileiros.
-              Portanto, a análise da estrutura dessa rede aérea pode nos ajudar a entender a propagação do COVID-19 por nosso país.
-              </p>
-      
-              <!-- CARD.BUTTON -->
-              <a href="https://guimaraeslabbr.weebly.com/COVID19.html" target="_blank"><button class="btn btn-primary" type="button">
-              Leia mais sobre
-              </button></a>
+  <!-- Date & Hour -->
+  <div class="container-fluid mt-2">
+    <div class="main-title">
+      <h1 class="display" id="page-title">Visão Geral</h1><small class="page-title-update updateDate">Última
+        atualização: </small>
+    </div> <!-- PAGE.TITLE -->
+  </div>
 
-              <!-- CARD.SIGNATURE -->
-              <div class="blockquote-footer text-right">Observatório COVID-19</div>
+  <!-- Cards -->
+  <div class="card-columns">
+    <!-- COLUMNS.NUM -->
 
+    <!-- BRASIL.MAP.CARD -->
+    <div class="card">
+      <div class="card-body">
+
+        <!-- CARD.HEADER -->
+        <div class="media">
+          <img src="./img/icon_globe.svg" class="card-icon" width=64px alt="Avião sobrevoando o globo terrestre">
+          <!-- CARD.TITLE.ICON -->
+          <div class="media-body">
+            <h5 class="card-title">Dinâmicas de contágio</h5> <!-- CARD.TITLE.TEXT -->
+            <p class="card-text">Como epidemias se espalham por um país continental?</p> <!-- CARD.TITLE.DESCRIPTION -->
           </div>
+        </div>
+
+        <!-- CARD.DATE -->
+        <p class="card-date"><small class="updateDate">Última atualização: </small></p>
+
+        <!-- CARD.IMAGE -->
+        <img src="./fig/voos_brasil.jpg" class="card-img-top"
+          alt="Gráfico de conexões sobre o mapa do Brasil que representa a dinâmica de propagação no país">
+        <!-- Todo: Compactar imagem -->
+        <p class="card-text legenda"><small>Os pontos representam estados brasileiros e as setas indicam a intensidade
+            de vôos saindo de um estado e chegando em outro.</small></p>
+
+        <!-- CARD.TEXT -->
+        <p class="text-justify">
+          A chave pode estar na rede formada por aeroportos e vôos conectando os estados brasileiros.
+          Portanto, a análise da estrutura dessa rede aérea pode nos ajudar a entender a propagação do COVID-19 por
+          nosso país.
+        </p>
+
+        <!-- CARD.BUTTON -->
+        <a href="https://guimaraeslabbr.weebly.com/COVID19.html" target="_blank"><button class="btn btn-primary"
+            type="button">
+            Leia mais sobre
+          </button></a>
+
+        <!-- CARD.SIGNATURE -->
+        <div class="blockquote-footer text-right">Observatório COVID-19</div>
+
       </div>
+    </div>
 
-      <!-- NEW.CARD -->
+    <!-- NEW.CARD -->
 
-      <!-- GRAPH.CARD -->
-      <div class="card">
-        <div class="card-body">        
-          <!-- CARD.HEADER -->
-          <div class="media">
-            <img src="./img/icon_virus.svg" width=64px alt="Desenho do coronavírus" class="card-icon"> <!-- CARD.TITLE.ICON -->
-            <div class="media-body">
-              <h5 class="card-title">Progressão da doença</h5> <!-- CARD.TITLE.TEXT -->
-              <p class="card-text">Quantos casos notificados já temos no Brasil? Quantos teremos nos próximos dias?</p> <!-- CARD.TITLE.DESCRIPTION -->
-            </div>
+    <!-- GRAPH.CARD -->
+    <div class="card">
+      <div class="card-body">
+        <!-- CARD.HEADER -->
+        <div class="media">
+          <img src="./img/icon_virus.svg" width=64px alt="Desenho do coronavírus" class="card-icon">
+          <!-- CARD.TITLE.ICON -->
+          <div class="media-body">
+            <h5 class="card-title">Progressão da doença</h5> <!-- CARD.TITLE.TEXT -->
+            <p class="card-text">Quantos casos notificados já temos no Brasil? Quantos teremos nos próximos dias?</p>
+            <!-- CARD.TITLE.DESCRIPTION -->
           </div>
+        </div>
 
-          <!-- CARD.DATE -->
-          <p class="card-date"><small class="updateDate">Última atualização: </small></p>
+        <!-- CARD.DATE -->
+        <p class="card-date"><small class="updateDate">Última atualização: </small></p>
 
-          <!-- CARD.GGPLOT -->
-          <div data-src="./graphs/plot.forecast.exp.html" class="codegena_iframe" data-css="background:url('./img/loading.gif') white center center no-repeat;border:0px;"  data-responsive="true">
-            <img src=./graphs/plot.forecast.exp.svg class="placeholder_svg" width="100%">
-          </div>
-          <script src="./js/async-iframe.js"></script>
+        <!-- CARD.GGPLOT -->
+        <div data-src="./graphs/plot.forecast.exp.html" class="codegena_iframe"
+          data-css="background:url('./img/loading.gif') white center center no-repeat;border:0px;"
+          data-responsive="true">
+          <img src=./graphs/plot.forecast.exp.svg class="placeholder_svg" width="100%">
+        </div>
+        <script src="./js/async-iframe.js"></script>
 
-          <!-- CARD.GGPLOT.LEGEND -->
-          <div class="card-chartLegend">
-            <small class="chartLegendSquare" id="legendGrey">Casos Confirmados</small>
-            <small class="chartLegendSquare" id="legendBlue">Previsão</small>
-          </div>
-          
-          <!-- CARD.BUTTON.EXPAND -->
-          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseGraph" aria-expanded="false" aria-controls="collapseGraph">
-            Por que só 5 dias? ▾
-          </button>
-          <!-- CARD.BUTTON.EXPAND.CONTENT -->
-          <div class="collapse mt-2" id="collapseGraph">
-            <p class="text-justify">
-              Porque quando o crescimento é exponencial as <b>incertezas também crescem exponencialmente.</b>
-              Por isso a região cinza, que expressa a incerteza da previsão, aumenta de largura com o tempo.
-              E mesmo pequenas mudanças na taxa que aconteçam hoje ou amanhã vão causar enormes variações no futuro.
-            </p>
-            <p class="text-justify">
-              Por isso avaliamos que é inadequado fazer previsões para mais de 5 dias com este método.
-            </p>
+        <!-- CARD.GGPLOT.LEGEND -->
+        <div class="card-chartLegend">
+          <small class="chartLegendSquare" id="legendGrey">Casos Confirmados</small>
+          <small class="chartLegendSquare" id="legendBlue">Previsão</small>
+        </div>
 
-            <!-- CARD.SIGNATURE -->
-            <div class="blockquote-footer text-right">Observatório COVID-19</div>
+        <!-- CARD.BUTTON.EXPAND -->
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseGraph"
+          aria-expanded="false" aria-controls="collapseGraph">
+          Por que só 5 dias? ▾
+        </button>
+        <!-- CARD.BUTTON.EXPAND.CONTENT -->
+        <div class="collapse mt-2" id="collapseGraph">
+          <p class="text-justify">
+            Porque quando o crescimento é exponencial as <b>incertezas também crescem exponencialmente.</b>
+            Por isso a região cinza, que expressa a incerteza da previsão, aumenta de largura com o tempo.
+            E mesmo pequenas mudanças na taxa que aconteçam hoje ou amanhã vão causar enormes variações no futuro.
+          </p>
+          <p class="text-justify">
+            Por isso avaliamos que é inadequado fazer previsões para mais de 5 dias com este método.
+          </p>
 
-          </div>
+          <!-- CARD.SIGNATURE -->
+          <div class="blockquote-footer text-right">Observatório COVID-19</div>
 
         </div>
+
       </div>
+    </div>
 
-      <!-- DUPLICACAO.NOTA.CARD -->
-      <div class="card">
-        <div class="card-body">
+    <!-- DUPLICACAO.NOTA.CARD -->
+    <div class="card">
+      <div class="card-body">
 
-          <!-- CARD.HEADER -->
-          <h5 class="card-title">Quão rápido a doença se propaga?</h5>
+        <!-- CARD.HEADER -->
+        <h5 class="card-title">Quão rápido a doença se propaga?</h5>
 
-          <!-- CARD.TEXT -->
-          <p class="text-justify">
-            No momento não é possível estimar tempos de duplicação da epidemia, pois há um enorme acúmulo de testes moleculares sem resultados, necessários para que os casos sejam confirmados e notificados.
-            Essa demora faz com que os números disponíveis publicamente (número de notificações) cresça de maneira artificialmente lenta.
-          </p>
+        <!-- CARD.TEXT -->
+        <p class="text-justify">
+          No momento não é possível estimar tempos de duplicação da epidemia, pois há um enorme acúmulo de testes
+          moleculares sem resultados, necessários para que os casos sejam confirmados e notificados.
+          Essa demora faz com que os números disponíveis publicamente (número de notificações) cresça de maneira
+          artificialmente lenta.
+        </p>
 
-          <!-- CARD.TEXT -->
-          <p class="text-justify">
-            Assim, a evolução do números oficiais informa hoje sobre a dinâmica de notificação, não da epidemia.
-            Seria irresponsável seguir divulgando medidas de propagação da epidemia no Brasil com esses números.
-          </p>
-          
-          <!-- CARD.DATE -->
-          <p class="card-date"><small class="updateDate">Última atualização: </small></p>
+        <!-- CARD.TEXT -->
+        <p class="text-justify">
+          Assim, a evolução do números oficiais informa hoje sobre a dinâmica de notificação, não da epidemia.
+          Seria irresponsável seguir divulgando medidas de propagação da epidemia no Brasil com esses números.
+        </p>
 
-        </div>
+        <!-- CARD.DATE -->
+        <p class="card-date"><small class="updateDate">Última atualização: </small></p>
+
       </div>
+    </div>
 
-      <!-- NEW.CARD -->
+    <!-- NEW.CARD -->
 
-      <!-- ISOLAMENTO.CARD -->
-      <div class="card">
-        <div class="card-body">
+    <!-- ISOLAMENTO.CARD -->
+    <div class="card">
+      <div class="card-body">
 
-          <!-- CARD.HEADER -->
-          <div class="media">
-            <img src="./img/icon_people.svg" width=64px alt="Desenho que representa a transmissão da doença entre pessoas" class="card-icon"> <!-- CARD.TITLE.ICON -->
-            <div class="media-body">
-              <h5 class="card-title">Isolamento Social</h5> <!-- CARD.TITLE.TEXT -->
-              <p class="card-text">Como o isolamento social influencia a dinâmica de propagação da epidemia?</p> <!-- CARD.TITLE.DESCRIPTION -->
-            </div>
+        <!-- CARD.HEADER -->
+        <div class="media">
+          <img src="./img/icon_people.svg" width=64px alt="Desenho que representa a transmissão da doença entre pessoas"
+            class="card-icon"> <!-- CARD.TITLE.ICON -->
+          <div class="media-body">
+            <h5 class="card-title">Isolamento Social</h5> <!-- CARD.TITLE.TEXT -->
+            <p class="card-text">Como o isolamento social influencia a dinâmica de propagação da epidemia?</p>
+            <!-- CARD.TITLE.DESCRIPTION -->
           </div>
+        </div>
 
-          <!-- CARD.DATE -->
-          <p class="card-date"><small class="updateDate">Última atualização: </small></p>
+        <!-- CARD.DATE -->
+        <p class="card-date"><small class="updateDate">Última atualização: </small></p>
 
-          <!-- CARD.IMAGE -->
-          <img src="./fig/rede_prsc.jpg" class="card-img-top" alt="Simulação visual de como ocorre a transmissão entre pessoas da doença"> 
-          <p class="card-text legenda"><small>Nesta simulação cada pessoa tem um número de contatos e esses contatos estão espalhados no espaço e conectadas interações sociais.</small></p> <!-- CARD.IMAGE.LEGENDA -->
+        <!-- CARD.IMAGE -->
+        <img src="./fig/rede_prsc.jpg" class="card-img-top"
+          alt="Simulação visual de como ocorre a transmissão entre pessoas da doença">
+        <p class="card-text legenda"><small>Nesta simulação cada pessoa tem um número de contatos e esses contatos estão
+            espalhados no espaço e conectadas interações sociais.</small></p> <!-- CARD.IMAGE.LEGENDA -->
 
-          <!-- CARD.TEXT -->
-          <p class="text-justify">
-            Aqui, usamos um cenário bem simples para ilustrar as <b>vantagens do isolamento social</b> em reduzir a propagação de uma doença contagiosa.
-            Nós traduzimos e adaptamos o modelo de propagação de um vírus em uma rede social feito por Uri Wilensky (Northwestern University).
-          </p>
+        <!-- CARD.TEXT -->
+        <p class="text-justify">
+          Aqui, usamos um cenário bem simples para ilustrar as <b>vantagens do isolamento social</b> em reduzir a
+          propagação de uma doença contagiosa.
+          Nós traduzimos e adaptamos o modelo de propagação de um vírus em uma rede social feito por Uri Wilensky
+          (Northwestern University).
+        </p>
 
-          <!-- CARD.BUTTON -->
-          <a href="https://guimaraeslabbr.weebly.com/COVID19.html" target="_blank"><button class="btn btn-primary mt-1" type="button">
+        <!-- CARD.BUTTON -->
+        <a href="https://guimaraeslabbr.weebly.com/COVID19.html" target="_blank"><button class="btn btn-primary mt-1"
+            type="button">
             Simule diferentes cenários
           </button></a>
 
-          <!-- CARD.SIGNATURE -->
-          <div class="blockquote-footer text-right">Observatório COVID-19</div>
+        <!-- CARD.SIGNATURE -->
+        <div class="blockquote-footer text-right">Observatório COVID-19</div>
 
-        </div>
       </div>
+    </div>
 
-      <!-- NEW.CARD -->
+    <!-- NEW.CARD -->
 
-      <!-- PERGUNTAS.CARD -->
-      <div class="card">
-        <div class="card-body">
+    <!-- PERGUNTAS.CARD -->
+    <div class="card">
+      <div class="card-body">
 
-          <!-- CARD.HEADER -->
-          <div class="media">
-            <img src="./img/icon_questions.svg" width=64px alt="Desenho que representa a transmissão da doença entre pessoas" class="card-icon"> <!-- CARD.TITLE.ICON -->
-            <div class="media-body">
-              <h5 class="card-title">Perguntas</h5> <!-- CARD.TITLE.TEXT -->
-              <p class="card-text">Respostas da nossa equipe para algumas das principais perguntas sobre COVID-19</p> <!-- CARD.TITLE.DESCRIPTION -->
-            </div>
+        <!-- CARD.HEADER -->
+        <div class="media">
+          <img src="./img/icon_questions.svg" width=64px
+            alt="Desenho que representa a transmissão da doença entre pessoas" class="card-icon">
+          <!-- CARD.TITLE.ICON -->
+          <div class="media-body">
+            <h5 class="card-title">Perguntas</h5> <!-- CARD.TITLE.TEXT -->
+            <p class="card-text">Respostas da nossa equipe para algumas das principais perguntas sobre COVID-19</p>
+            <!-- CARD.TITLE.DESCRIPTION -->
           </div>
+        </div>
 
-          <!-- CARD.DATE -->
-          <p class="card-date"><small class="updateDate">Última atualização: </small></p>
+        <!-- CARD.DATE -->
+        <p class="card-date"><small class="updateDate">Última atualização: </small></p>
 
-          <!-- CARD.IMAGE -->
-          <img src="./fig/mensagem.jpeg" class="card-img-top" alt="Simulação visual de como ocorre a transmissão entre pessoas da doença"> 
-         
+        <!-- CARD.IMAGE -->
+        <img src="./fig/mensagem.jpeg" class="card-img-top"
+          alt="Simulação visual de como ocorre a transmissão entre pessoas da doença">
 
-          <!-- CARD.BUTTON -->
-          <a href="perguntas.html" target="_blank"><button class="btn btn-primary mt-1" type="button">
+
+        <!-- CARD.BUTTON -->
+        <a href="perguntas.html" target="_blank"><button class="btn btn-primary mt-1" type="button">
             Veja dúvidas frequentes
           </button></a>
 
-          <!-- CARD.SIGNATURE -->
-          <div class="blockquote-footer text-right">Observatório COVID-19</div>
+        <!-- CARD.SIGNATURE -->
+        <div class="blockquote-footer text-right">Observatório COVID-19</div>
 
-        </div>
       </div>
-      
+    </div>
+
   </div>
 
-    <!-- Footer -->
-    <footer class="container-fluid">
-      <div class="footer-content"> 
-          <ion-icon name="logo-github"></ion-icon>
-          <p class="mb-0 ml-1"><a href="https://github.com/covid19br/covid19br.github.io" target="_blank" class="text-reset">Source Code</a></p>
-      </div>
-      <!-- FOOTER.TEXT -->
-    </footer>
+  <!-- Footer -->
+  <footer class="container-fluid">
+    <div class="footer-content">
+      <ion-icon name="logo-github"></ion-icon>
+      <p class="mb-0 ml-1"><a href="https://github.com/covid19br/covid19br.github.io" target="_blank"
+          class="text-reset">Source Code</a></p>
+    </div>
+    <!-- FOOTER.TEXT -->
+  </footer>
 
-    <!-- JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS via BootstrapCDN-->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> <!-- Ionic Icons -->
-    <script src="./js/updateDate.js"></script>
-  </body>
+  <!-- JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS via BootstrapCDN-->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> <!-- Ionic Icons -->
+  <script src="./js/updateDate.js"></script>
+</body>
+
 </html>
