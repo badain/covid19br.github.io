@@ -163,7 +163,47 @@ function setRequest(uf) {
     setActive(state);
 }
 
-function updateGraphs() {
+function loadIframe(iframeName, url) {
+    var $iframe = $('#' + iframeName);
+    if ( $iframe.length ) {
+        $iframe.attr('src',url);   
+        return false;
+    }
+    return true;
+}
+function updateWidget() {
+    // Get Current State
+    const current_uf = getCurrentUF();
+
+    // Get Widget's SRCs
+    var widget_src = $("iframe").attr("src");
+
+    // Process Current Graph's SRC
+    var split_src = widget_src.split('.');
+
+    // remove UF
+    var new_src = "";
+
+    // change UF
+    for(i=0; i<split_src.length; i++) {
+        if(i == (split_src.length - 2)) {
+            new_src = new_src + "." + current_uf;
+        }
+        else {
+            if(i==0) {
+                new_src = new_src + split_src[i];
+            }
+            else {
+                new_src = new_src + "." + split_src[i];
+            }
+        }
+    }
+
+    // Update SRCs
+    $("iframe").attr("src", new_src);
+}
+
+function updateStatic() {
     // Get Current State
     const current_uf = getCurrentUF();
 
@@ -179,6 +219,7 @@ function updateGraphs() {
     var new_src = "";
     var new_svg = "";
 
+    // change UF
     if(hasUF(split_src)) {
         for(i=0; i<split_src.length; i++) {
             if(i == (split_src.length - 2)) {
@@ -217,7 +258,9 @@ function updateGraphs() {
     }
     
     // Update SRCs
+    // HTML Widget
     $(".codegena_iframe").attr("data-src", new_src);
+    // SVG Placeholder
     $(".placeholder_svg").attr("src", new_svg);
 }
 
@@ -229,7 +272,7 @@ var requested = $(location).attr('hash').substring(1);
 if(requested.length == 2) setRequest(requested);
 
 // Updates states based on #page-title
-updateGraphs();
+updateStatic();
 
 // JQuery OnClick Update
 $(".dropdown-item").click(function () {
@@ -242,6 +285,9 @@ $(".dropdown-item").click(function () {
         setActive($(this).text());
 
         // troca os gráficos
-        updateGraphs();
+        if($(".placeholder_svg").length) updateStatic();
+
+        // atualiza o iframe
+        else updateWidget();
     }
 })
