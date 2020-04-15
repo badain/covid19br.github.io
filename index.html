@@ -80,20 +80,20 @@
     <!-- MENU -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="./index.html">Visão Geral</a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="./fontes.html">Fontes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./informacoes.html">Informações Técnicas</a>
+          <a class="nav-link active" href="./index.html">Visão Geral</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./perguntas.html">Perguntas Comuns</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="./informacoes.html">Informações Técnicas</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="./midia.html">Reportagens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./fontes.html">Fontes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./sobre.html">Sobre</a>
@@ -101,6 +101,7 @@
         <!-- MENU.ITEM -->
       </ul>
     </div>
+    
   </nav>
 
 
@@ -116,6 +117,34 @@
   <div class="card-columns">
     <!-- COLUMNS.NUM -->
 
+    <!-- PERGUNTAS.CARD -->
+    <div class="card">
+      <div class="card-body">
+
+        <!-- CARD.HEADER -->
+        <div class="media">
+          <img src="./img/icon_questions.svg" width=64px alt="Desenho que representa um profissional da saúde"
+            class="card-icon">
+          <!-- CARD.TITLE.ICON -->
+          <div class="media-body">
+            <h5 class="card-title">Perguntas</h5> <!-- CARD.TITLE.TEXT -->
+            <p class="card-text">Respostas da nossa equipe para algumas das principais perguntas sobre COVID-19</p>
+            <!-- CARD.TITLE.DESCRIPTION -->
+          </div>
+        </div>
+
+        <!-- CARD.IMAGE -->
+        <img src="./fig/mensagem.jpeg" class="card-img-top"
+          alt="Simulação visual de como ocorre a transmissão entre pessoas da doença">
+
+
+        <!-- CARD.BUTTON -->
+        <a href="perguntas.html" target="_blank"><button class="btn btn-primary mt-1" type="button">
+            Veja dúvidas frequentes
+          </button></a>
+      </div>
+    </div>
+
     <!-- BRASIL.MAP.CARD -->
     <div class="card">
       <div class="card-body">
@@ -129,9 +158,6 @@
             <p class="card-text">Como epidemias se espalham por um país continental?</p> <!-- CARD.TITLE.DESCRIPTION -->
           </div>
         </div>
-
-        <!-- CARD.DATE -->
-        <p class="card-date"><small class="updateDate">Última atualização: </small></p>
 
         <!-- CARD.IMAGE -->
         <img src="./fig/voos_brasil.jpg" class="card-img-top"
@@ -148,13 +174,13 @@
         </p>
 
         <!-- CARD.BUTTON -->
-        <a href="https://guimaraeslabbr.weebly.com/COVID19.html" target="_blank"><button class="btn btn-primary"
+        <a href="https://guimaraeslabbr.weebly.com/voos.html" target="_blank"><button class="btn btn-primary"
             type="button">
             Leia mais sobre
           </button></a>
 
         <!-- CARD.SIGNATURE -->
-        <div class="blockquote-footer text-right">Observatório COVID-19</div>
+        <div class="blockquote-footer text-right">Guimarães Lab</div>
 
       </div>
     </div>
@@ -179,11 +205,9 @@
         <p class="card-date"><small class="updateDate">Última atualização: </small></p>
 
         <!-- CARD.GGPLOT -->
-        <div data-src="./graphs/plot.forecast.exp.html" class="codegena_iframe"
-          data-css="background:url('./img/loading.gif') white center center no-repeat;border:0px;"
-          data-responsive="true">
-          <img src=./graphs/plot.forecast.exp.svg class="placeholder_svg" width="100%">
-        </div>
+        <a href="./estados.html#br" target="_blank">
+          <img src=./graphs/plot.forecast.exp.br.svg class="placeholder_svg" width="100%">
+        </a>
         <script src="./js/async-iframe.js"></script>
 
         <!-- CARD.GGPLOT.LEGEND -->
@@ -221,7 +245,15 @@
       <div class="card-body">
 
         <!-- CARD.HEADER -->
-        <h5 class="card-title">Quão rápido a doença se propaga?</h5>
+        <div class="media">
+          <img src="./img/icon_virus_double.svg" width=64px alt="Desenho que representa o coronavírus em duplicação"
+            class="card-icon"> <!-- CARD.TITLE.ICON -->
+          <div class="media-body">
+            <h5 class="card-title">O tempo de duplicação</h5> <!-- CARD.TITLE.TEXT -->
+            <p class="card-text">É possível estimar o quão rápido a doença se propaga?</p>
+            <!-- CARD.TITLE.DESCRIPTION -->
+          </div>
+        </div>
 
         <!-- CARD.TEXT -->
         <p class="text-justify">
@@ -237,8 +269,8 @@
           Seria irresponsável seguir divulgando medidas de propagação da epidemia no Brasil com esses números.
         </p>
 
-        <!-- CARD.DATE -->
-        <p class="card-date"><small class="updateDate">Última atualização: </small></p>
+        <!-- CARD.SIGNATURE -->
+        <div class="blockquote-footer text-right">Observatório COVID-19</div>
 
       </div>
     </div>
@@ -259,9 +291,6 @@
             <!-- CARD.TITLE.DESCRIPTION -->
           </div>
         </div>
-
-        <!-- CARD.DATE -->
-        <p class="card-date"><small class="updateDate">Última atualização: </small></p>
 
         <!-- CARD.IMAGE -->
         <img src="./fig/rede_prsc.jpg" class="card-img-top"
@@ -284,47 +313,12 @@
           </button></a>
 
         <!-- CARD.SIGNATURE -->
-        <div class="blockquote-footer text-right">Observatório COVID-19</div>
+        <div class="blockquote-footer text-right">Guimarães Lab</div>
 
       </div>
     </div>
 
     <!-- NEW.CARD -->
-
-    <!-- PERGUNTAS.CARD -->
-    <div class="card">
-      <div class="card-body">
-
-        <!-- CARD.HEADER -->
-        <div class="media">
-          <img src="./img/icon_questions.svg" width=64px
-            alt="Desenho que representa a transmissão da doença entre pessoas" class="card-icon">
-          <!-- CARD.TITLE.ICON -->
-          <div class="media-body">
-            <h5 class="card-title">Perguntas</h5> <!-- CARD.TITLE.TEXT -->
-            <p class="card-text">Respostas da nossa equipe para algumas das principais perguntas sobre COVID-19</p>
-            <!-- CARD.TITLE.DESCRIPTION -->
-          </div>
-        </div>
-
-        <!-- CARD.DATE -->
-        <p class="card-date"><small class="updateDate">Última atualização: </small></p>
-
-        <!-- CARD.IMAGE -->
-        <img src="./fig/mensagem.jpeg" class="card-img-top"
-          alt="Simulação visual de como ocorre a transmissão entre pessoas da doença">
-
-
-        <!-- CARD.BUTTON -->
-        <a href="perguntas.html" target="_blank"><button class="btn btn-primary mt-1" type="button">
-            Veja dúvidas frequentes
-          </button></a>
-
-        <!-- CARD.SIGNATURE -->
-        <div class="blockquote-footer text-right">Observatório COVID-19</div>
-
-      </div>
-    </div>
 
   </div>
 
