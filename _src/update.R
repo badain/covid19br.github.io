@@ -1,43 +1,23 @@
 # Libraries
 library(rmarkdown)
 
-# Estados
-estados.para.atualizar <- c('SP', 'RJ')
-#sigla.estado <- c(AC="Acre", AL="Alagoas", AP="Amapá", AM="Amazonas",
-#                  BA="Bahia", CE="Ceará", DF="Distrito Federal", ES="Espírito Santo",
-#                  GO="Goiás", MA="Maranhão", MT="Mato Grosso",
-#                  MS="Mato Grosso do Sul", MG="Minas Gerais", PA="Pará", PB="Paraíba",
-#                  PR="Paraná", PE="Pernambuco", PI="Piauí", RJ="Rio de Janeiro",
-#                  RO="Rondônia", RR="Roraima", SC="Santa                   RN="Rio Grande do Norte", RS="Rio Grande do Sul",
-#Catarina",
-#                  SP="São Paulo", SE="Sergipe", TO="Tocantins")
+# Helper Functions
+makeNamedList <- function(...) {
+  structure(list(...), names = as.list(substitute(list(...)))[-1L])
+}
 
-# Data Processing
+estados.para.atualizar <- c('SP', 'RJ') # Estados a serem atualizados
+
+# Processamento de Dados
 source('prepara_dados.R')
 source('ajuste_projecao_exponencial.R')
+
+# Geracao dos graficos
 source('plots.R')
-source('render_graphs.R')
 
-#rD <- RSelenium::rsDriver(browser = "chrome")
-#Svg <- plotly_IMAGE(graph, format = "png",  out_file = "plotly-test-image.png");
-#export(graph, format = "svg",  file = "plot.tempo.dupl.svg", selenium = rD);
-
-#rmarkdown::render('projecao.Rmd', output_dir='../')
-#knitr::knit("index.Rhtml");
-
-#static_pages <- c('sobre.md', 'fontes.md', 'midia.md')
-#dynamic_pages <- c('index.Rmd', 'informacoes.Rmd', 'projecao.Rmd', 'pais.Rmd',
-#                   'dinamica.Rmd')
-
-# 'propagacao.Rmd', 'transmissao.Rmd'
-# 'casos.Rmd', 
-#all_pages <- c(static_pages, dynamic_pages)
-
-#for (f in dynamic_pages){
-#    rmarkdown::render(f, output_dir='../')
-#}
-
-#for (st in estados.para.atualizar){
-#    rmarkdown::render('estado.Rmd', output_dir='../',
-#                      output_file=paste0('../', st, '.html'))
-#}
+# Atualizacao do conteudo do site
+# Atualizacao
+plots.para.atualizar <- makeNamedList(plot.forecast.exp.br, plot.tempo.dupl, est.tempo.dupl, proj.num.casos) # Graficos a serem atualizados
+tables.para.atualizar <- makeNamedList(serie.temp.table) # Tabelas a serem atualizadas
+# Graficos, tabelas e horário
+source('update_web.R')

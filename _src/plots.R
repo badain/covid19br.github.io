@@ -22,7 +22,7 @@ plot.formatos <- theme_bw()+
 ncasos.completa <-merge(casos=brasil$casos.acumulados, exp.5d[, c("predito","ic.low","ic.upp")])
 ncasos.completa$casos[time(ncasos.completa)>=min(time(exp.5d))] <- exp.5d$predito[time(exp.5d)>=min(time(exp.5d))]
 
-plot.forecast.exp <-
+plot.forecast.exp.br <-
     ggplot(data=ncasos.completa, aes(x=Index, y=casos,ymin=ic.low, ymax=ic.upp)) +
     geom_ribbon(fill="lightgrey") +
     geom_line() +
@@ -71,7 +71,7 @@ plot.estimate.R0 <-
 ## Grafico da serie observada e do previsto pelo modelo exponencial
 ## para os proximos 5 dias (com intervalo de confiança)
 ################################################################################
-estados.plot.forecast.exp <- list()
+estados.plot.forecast.exp.br <- list()
 for (st in names(estados.d0)){
     ## Serie com observados e previstos
     ## (gambiarra para ter linha contínua no grafico, verificar help de ggplot.zoo)
@@ -79,7 +79,7 @@ for (st in names(estados.d0)){
                             estados.exp.5d[[st]][, c("predito","ic.low","ic.upp")])
     ncasos.completa$casos[time(ncasos.completa)>=min(time(estados.exp.5d[[st]]))] <- estados.exp.5d[[st]]$predito[time(estados.exp.5d[[st]])>=min(time(estados.exp.5d[[st]]))]
     
-    estados.plot.forecast.exp[[st]] <-
+    estados.plot.forecast.exp.br[[st]] <-
         ggplot(data=ncasos.completa, aes(x=Index, y=casos,ymin=ic.low, ymax=ic.upp)) +
         geom_ribbon(fill="lightgrey") +
         geom_line() +
@@ -163,4 +163,3 @@ rownames(ex.dt.df) <- format(as.Date(rownames(ex.dt.df)), "%d/%m/%Y")
 serie.temp.table <- kable(ex.dt.df, "html", col.names=c("Estimado", "IC-inferior", "IC-superior"),
       caption="Estimativas dos tempos de duplicação do número de casos de COVID-19 para o Brasil, para período de 5 dias, a partir de 07 de março de 2020. Indicados os valores estimados e os limites inferiores e superiores do intervalo de confiança a 95%. As datas em cada linha da tabela são os dias do final de cada período.",
       pagetitle = "09")
-write_file(serie.temp.table, "tabela_serie_temporal.html")
