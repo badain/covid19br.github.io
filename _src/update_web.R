@@ -39,7 +39,8 @@ for (st in estados.para.atualizar) {
 ################################################################################
 ## Atualiza tabelas
 ################################################################################
-filenames <- names(tables.para.atualizar)
+names.tables <- makeNamedList(tables.para.atualizar)
+filenames <- names(names.tables)
 n <- length(tables.para.atualizar)
 
 for (i in 1:n){

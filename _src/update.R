@@ -18,6 +18,6 @@ source('plots.R')
 # Atualizacao do conteudo do site
 # Atualizacao
 plots.para.atualizar <- makeNamedList(plot.forecast.exp.br, plot.tempo.dupl, est.tempo.dupl, proj.num.casos) # Graficos a serem atualizados
-tables.para.atualizar <- makeNamedList(serie.temp.table) # Tabelas a serem atualizadas
+tables.para.atualizar <- c(serie.temp.table) # Tabelas a serem atualizadas
 # Graficos, tabelas e horário
 source('update_web.R')
